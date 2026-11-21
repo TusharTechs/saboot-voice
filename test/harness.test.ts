@@ -56,6 +56,13 @@ test("turn judge waits when a number was asked for but none heard yet", () => {
   assert.equal(judgeTurn({ transcript: "mujhe yaad nahi hai", expecting: "mobile", silenceMs: 400 }).action, "respond");
 });
 
+test("turn judge hears hesitation in Devanagari transcripts", () => {
+  assert.equal(judgeTurn({ transcript: "मेरा इंटरनेट कल रात से बंद है और", silenceMs: 400 }).action, "wait");
+  assert.equal(judgeTurn({ transcript: "बिल तो पे कर दिया था, मतलब", silenceMs: 400 }).action, "wait");
+  assert.equal(judgeTurn({ transcript: "मेरा इंटरनेट कल रात से बंद है।", silenceMs: 400 }).action, "respond");
+  assert.equal(judgeTurn({ transcript: "nine eight, umm", expecting: null, silenceMs: 400 }).action, "wait");
+});
+
 test("tens words: ninety eight seventy six", () => {
   assert.equal(allDigits("ninety eight seventy six five four three two one zero"), "9876543210");
 });

@@ -36,6 +36,21 @@ for (const b of document.querySelectorAll<HTMLButtonElement>(".mode button")) {
   });
 }
 
+// ---------- voice (remembered per browser) ----------
+try {
+  const saved = localStorage.getItem("saboot-voice");
+  if (saved) ($("voice") as HTMLSelectElement).value = saved;
+} catch {
+  /* storage unavailable */
+}
+$("voice").addEventListener("change", (e) => {
+  try {
+    localStorage.setItem("saboot-voice", (e.target as HTMLSelectElement).value);
+  } catch {
+    /* storage unavailable */
+  }
+});
+
 // ---------- call ----------
 $("call").addEventListener("click", () => (pc ? hangUp() : startCall().catch((e) => fail(e))));
 
@@ -50,10 +65,11 @@ function fail(e: unknown) {
 async function startCall() {
   resetUi();
   setStatus("Connecting…");
-  let r = await fetch(`/api/session?mode=${mode}`, { method: "POST", headers: { "x-demo-code": accessCode() } });
+  const voice = ($("voice") as HTMLSelectElement).value;
+  let r = await fetch(`/api/session?mode=${mode}&voice=${voice}`, { method: "POST", headers: { "x-demo-code": accessCode() } });
   if (r.status === 401) {
     const code = await askForCode();
-    r = await fetch(`/api/session?mode=${mode}`, { method: "POST", headers: { "x-demo-code": code } });
+    r = await fetch(`/api/session?mode=${mode}&voice=${voice}`, { method: "POST", headers: { "x-demo-code": code } });
   }
   const sess = await r.json();
   if (!r.ok) throw new Error(sess.error ?? `session ${r.status}`);
@@ -101,6 +117,7 @@ async function startCall() {
   $("call").classList.add("live");
   $("call-label").textContent = "End call";
   for (const b of document.querySelectorAll<HTMLButtonElement>(".mode button")) b.disabled = true;
+  ($("voice") as HTMLSelectElement).disabled = true;
 }
 
 /** Demo access code: from ?code= in the link, or remembered in this browser. */
@@ -145,6 +162,7 @@ function hangUp() {
   $("call").classList.remove("live");
   $("call-label").textContent = "Start call";
   for (const b of document.querySelectorAll<HTMLButtonElement>(".mode button")) b.disabled = false;
+  ($("voice") as HTMLSelectElement).disabled = false;
   if (ctl) setStatus("Call ended. Switch mode and call again to compare.");
 }
 

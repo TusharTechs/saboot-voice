@@ -16,10 +16,32 @@ export type TurnDecision =
   | { action: "respond"; reason: string }
   | { action: "wait"; reason: string; holdMs: number };
 
-const HESITATION_END =
-  /(\b(ek|one) (second|sec|minute|min)|\bwait|\bruko|\bmatlab|\bum+|\buh+|\bhmm+|\baur|\band|\bki|\bke|\bka|\bko|\bwo|\bwoh|\btoh|\bso|\blike|\bactually|\bbasically|\bhaan to|\bnumber hai|\bhai na|\bthat is|\bit's|\bmera|\bmy)\s*[,.…-]*$/i;
+/**
+ * Words a caller trails off on while still mid-thought, in Latin and Devanagari script.
+ * Live transcripts of Hindi often come back in Devanagari ("…बंद है और"), so both are needed.
+ * Matched on the last one or two words (a regex \b doesn't work for Devanagari).
+ */
+const HESITATION_WORDS = new Set([
+  "ek second", "one second", "ek sec", "one sec", "ek minute", "ek min", "wait", "ruko", "matlab", "aur", "and", "ki", "ke",
+  "ka", "ko", "wo", "woh", "toh", "to", "so", "like", "actually", "basically", "haan to", "number hai", "hai na", "that is",
+  "it's", "mera", "meri", "my", "yaani", "jaise", "phir", "fir", "uske baad", "but", "lekin", "par",
+  "और", "मतलब", "वो", "वह", "तो", "कि", "की", "के", "का", "को", "यानी", "जैसे", "फिर", "मेरा", "मेरी", "लेकिन", "पर",
+  "एक सेकंड", "एक मिनट", "रुको", "हाँ तो", "हां तो", "नंबर है", "उसके बाद",
+]);
+const FILLER_SOUND = /^(u+m+|u+h+|h+m+|a+h+|e+r+m*|उम्म+|अं+|हम्म+)$/;
+const CORRECTION_WORDS = new Set(["nahi", "nahin", "no", "sorry", "i mean", "galat", "नहीं", "सॉरी", "गलत", "मतलब नहीं"]);
 
-const CORRECTION_END = /\b(nahi|nahin|no|sorry|i mean|galat)\s*[,.…-]*$/i;
+function lastWords(text: string): [string, string] {
+  const words = text.toLowerCase().replace(/[.,;:!?…।॥"“”'‘’()\-–—]+/g, " ").trim().split(/\s+/).filter(Boolean);
+  const last = words[words.length - 1] ?? "";
+  const lastTwo = words.slice(-2).join(" ");
+  return [last, lastTwo];
+}
+
+function endsWith(text: string, set: Set<string>, sound?: RegExp): boolean {
+  const [last, lastTwo] = lastWords(text);
+  return set.has(last) || set.has(lastTwo) || (!!sound && sound.test(last));
+}
 
 export interface TurnInput {
   /** Everything the caller has said since the agent last spoke. */
@@ -63,10 +85,10 @@ export function judgeTurn(input: TurnInput, cfg: TurnConfig = DEFAULT_TURN_CONFI
   if (endsMidNumber(text) && input.silenceMs < cfg.numberHoldMs)
     return { action: "wait", reason: "ended on 'double'/'triple' or a tens word", holdMs: cfg.numberHoldMs - input.silenceMs };
 
-  if (CORRECTION_END.test(text) && input.silenceMs < cfg.numberHoldMs)
+  if (endsWith(text, CORRECTION_WORDS) && input.silenceMs < cfg.numberHoldMs)
     return { action: "wait", reason: "caller is correcting themselves", holdMs: cfg.numberHoldMs - input.silenceMs };
 
-  if (HESITATION_END.test(text) && input.silenceMs < cfg.hesitationHoldMs)
+  if (endsWith(text, HESITATION_WORDS, FILLER_SOUND) && input.silenceMs < cfg.hesitationHoldMs)
     return { action: "wait", reason: "trailing hesitation word", holdMs: cfg.hesitationHoldMs - input.silenceMs };
 
   const words = tokenize(text).filter((t) => t.kind === "word").length;

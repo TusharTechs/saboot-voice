@@ -3,7 +3,7 @@ import "../../eval/env.ts";
 import { createServer } from "node:http";
 import { readFileSync, existsSync } from "node:fs";
 import { resolve } from "node:path";
-import { mintClientSecret, parseMode } from "./session.js";
+import { mintClientSecret, parseMode, parseVoice } from "./session.js";
 
 const PORT = Number(process.env.API_PORT ?? 8787);
 
@@ -18,7 +18,7 @@ createServer(async (req, res) => {
       }
       const key = process.env.OPENAI_API_KEY;
       if (!key) throw new Error("OPENAI_API_KEY missing in .env");
-      const out = await mintClientSecret(key, parseMode(url.searchParams.get("mode")));
+      const out = await mintClientSecret(key, parseMode(url.searchParams.get("mode")), parseVoice(url.searchParams.get("voice")));
       res.writeHead(200, { "Content-Type": "application/json" }).end(JSON.stringify(out));
       return;
     }
