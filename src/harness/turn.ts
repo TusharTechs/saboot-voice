@@ -27,6 +27,8 @@ const HESITATION_WORDS = new Set([
   "it's", "mera", "meri", "my", "yaani", "jaise", "phir", "fir", "uske baad", "but", "lekin", "par",
   "और", "मतलब", "वो", "वह", "तो", "कि", "की", "के", "का", "को", "यानी", "जैसे", "फिर", "मेरा", "मेरी", "लेकिन", "पर",
   "एक सेकंड", "एक मिनट", "रुको", "हाँ तो", "हां तो", "नंबर है", "उसके बाद",
+  // "ek second" is often transcribed as "eight second"/"a second": a trailing second/minute means "wait"
+  "second", "seconds", "sec", "minute", "minutes", "min", "सेकंड", "मिनट",
 ]);
 const FILLER_SOUND = /^(u+m+|u+h+|h+m+|a+h+|e+r+m*|उम्म+|अं+|हम्म+)$/;
 const CORRECTION_WORDS = new Set(["nahi", "nahin", "no", "sorry", "i mean", "galat", "नहीं", "सॉरी", "गलत", "मतलब नहीं"]);

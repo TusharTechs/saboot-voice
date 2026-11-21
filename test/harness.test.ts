@@ -63,6 +63,11 @@ test("turn judge hears hesitation in Devanagari transcripts", () => {
   assert.equal(judgeTurn({ transcript: "nine eight, umm", expecting: null, silenceMs: 400 }).action, "wait");
 });
 
+test("'ek second' misheard as 'eight second' is still a pause, not digits", () => {
+  assert.equal(judgeTurn({ transcript: "Haan Eight second.", silenceMs: 400 }).action, "wait");
+  assert.equal(allDigits("seven zero three two, eight second, six eight"), "703268");
+});
+
 test("tens words: ninety eight seventy six", () => {
   assert.equal(allDigits("ninety eight seventy six five four three two one zero"), "9876543210");
 });

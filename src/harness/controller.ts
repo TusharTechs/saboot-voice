@@ -152,7 +152,14 @@ export class CallController {
     const d = judgeTurn({ transcript: this.turnText, expecting: this.expecting, silenceMs }, this.turnCfg);
     if (d.action === "respond") {
       this.log("respond", d.reason);
-      this.send({ type: "response.create" });
+      // The caller just answered the detail we asked for: record it before any small talk,
+      // so the read-back comes straight away instead of after "let me just check…".
+      const gaveDetail = this.expecting && this.turnText && !/\b(nahi pata|yaad nahi|don'?t know|pata nahi|kyun|why)\b|नहीं पता|याद नहीं/i.test(this.turnText);
+      this.send(
+        gaveDetail
+          ? { type: "response.create", response: { tool_choice: { type: "function", name: "record_detail" } } }
+          : { type: "response.create" },
+      );
       return;
     }
     this.log("wait", d.reason);
@@ -268,7 +275,14 @@ export class CallController {
 
   private toolOutput(cap: Capture): Record<string, unknown> {
     return cap.ok
-      ? { ok: true, value: cap.value, readback: cap.readback, say_digits: cap.readback && /\d/.test(cap.readback) ? speakDigits(cap.readback) : undefined, warning: cap.warning }
+      ? {
+          ok: true,
+          value: cap.value,
+          // digits pre-spaced in their groups ("8 8 0 1 2, 4 5 6 7 9") so they can only be read one by one
+          readback: cap.readback && /\d/.test(cap.readback) ? cap.readback.split(" ").map((g) => g.split("").join(" ")).join(", ") : cap.readback,
+          say_digits: cap.readback && /\d/.test(cap.readback) ? speakDigits(cap.readback) : undefined,
+          warning: cap.warning,
+        }
       : { ok: false, problem: cap.problem, heard_so_far: cap.heard };
   }
 }

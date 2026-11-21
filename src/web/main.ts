@@ -92,7 +92,14 @@ async function startCall() {
 
   dc.onopen = () => {
     setStatus(mode === "saboot" ? "Live · Saboot harness on" : "Live · base model");
-    send({ type: "response.create", response: { instructions: "Greet the caller in Hinglish as LineOne Fibre support and ask what the problem is. One short sentence." } });
+    send({
+      type: "response.create",
+      response: {
+        instructions:
+          "Greet the caller in Hindi with your natural Indian accent, as LineOne Fibre support, and ask what the problem is. " +
+          'One short sentence, like "नमस्ते, LineOne Fibre support से बोल रहा हूँ, बताइए क्या problem आ रही है?"',
+      },
+    });
   };
   dc.onmessage = (m) => {
     const ev = JSON.parse(m.data);

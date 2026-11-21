@@ -49,7 +49,7 @@ const FILLERS = new Set([
 
 /** Phrases that mean "wait, I'm still talking" and must not be read as digits ("ek second" is not 1). */
 const PAUSE_PHRASES = [
-  /\b(ek|one)\s+(second|sec|seconds|minute|min)\b/g,
+  /\b(ek|one|eight|a|1|8)\s+(second|sec|seconds|minute|min)\b/g, // "ek second" is often heard as "eight second"
   /\b(hold on|wait|ruko|ruk jao|ruko zara)\b/g,
   /एक\s+(सेकंड|मिनट)/g,
 ];
