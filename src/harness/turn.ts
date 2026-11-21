@@ -1,0 +1,69 @@
+/**
+ * End-of-turn judge for Hinglish support calls.
+ *
+ * Silence-based voice activity detection ends a turn after a fixed pause, and
+ * even semantic VAD is tuned on English conversation. Indian callers pause
+ * mid-number ("nine eight four... ek second... double one"), trail off with
+ * "matlab", "aur", "wo", and correct themselves. Ending the turn there makes the
+ * agent interrupt and capture half a number. This judge reads the transcript so
+ * far and the field the agent is collecting, and decides whether to answer now
+ * or keep listening, with a hard cap so it never waits forever.
+ */
+import { endsMidNumber, findDigitRuns, tokenize } from "./numbers.js";
+import { EXPECTED_LENGTH, type Field } from "./entities.js";
+
+export type TurnDecision =
+  | { action: "respond"; reason: string }
+  | { action: "wait"; reason: string; holdMs: number };
+
+const HESITATION_END =
+  /(\b(ek|one) (second|sec|minute|min)|\bwait|\bruko|\bmatlab|\bum+|\buh+|\bhmm+|\baur|\band|\bki|\bke|\bka|\bko|\bwo|\bwoh|\btoh|\bso|\blike|\bactually|\bbasically|\bhaan to|\bnumber hai|\bhai na|\bthat is|\bit's|\bmera|\bmy)\s*[,.…-]*$/i;
+
+const CORRECTION_END = /\b(nahi|nahin|no|sorry|i mean|galat)\s*[,.…-]*$/i;
+
+export interface TurnInput {
+  /** Everything the caller has said since the agent last spoke. */
+  transcript: string;
+  /** The field the agent just asked for, if any. */
+  expecting?: Field | null;
+  /** How long the caller has been silent, in ms. */
+  silenceMs: number;
+}
+
+export interface TurnConfig {
+  /** Longest extra wait for an incomplete number. */
+  numberHoldMs: number;
+  /** Longest extra wait after a trailing hesitation word. */
+  hesitationHoldMs: number;
+}
+
+export const DEFAULT_TURN_CONFIG: TurnConfig = { numberHoldMs: 2600, hesitationHoldMs: 1800 };
+
+export function judgeTurn(input: TurnInput, cfg: TurnConfig = DEFAULT_TURN_CONFIG): TurnDecision {
+  const text = input.transcript.trim();
+  if (!text) return { action: "wait", reason: "nothing heard yet", holdMs: cfg.hesitationHoldMs };
+
+  const expected = input.expecting ? EXPECTED_LENGTH[input.expecting] : undefined;
+  if (expected) {
+    const runs = findDigitRuns(text);
+    const heard = runs.map((r) => r.digits).join("").replace(/^(91|0)(?=\d{10}$)/, "");
+    const needDigits = input.expecting === "customer_id" ? 8 : expected;
+    if (heard.length > 0 && heard.length < needDigits) {
+      if (input.silenceMs < cfg.numberHoldMs)
+        return { action: "wait", reason: `number incomplete: ${heard.length} of ${needDigits} digits`, holdMs: cfg.numberHoldMs - input.silenceMs };
+      return { action: "respond", reason: `gave up waiting at ${heard.length} of ${needDigits} digits; ask for the rest` };
+    }
+  }
+
+  if (endsMidNumber(text) && input.silenceMs < cfg.numberHoldMs)
+    return { action: "wait", reason: "ended on 'double'/'triple' or a tens word", holdMs: cfg.numberHoldMs - input.silenceMs };
+
+  if (CORRECTION_END.test(text) && input.silenceMs < cfg.numberHoldMs)
+    return { action: "wait", reason: "caller is correcting themselves", holdMs: cfg.numberHoldMs - input.silenceMs };
+
+  if (HESITATION_END.test(text) && input.silenceMs < cfg.hesitationHoldMs)
+    return { action: "wait", reason: "trailing hesitation word", holdMs: cfg.hesitationHoldMs - input.silenceMs };
+
+  const words = tokenize(text).filter((t) => t.kind === "word").length;
+  return { action: "respond", reason: words <= 2 ? "short complete reply" : "complete" };
+}

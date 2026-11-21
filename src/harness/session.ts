@@ -1,0 +1,100 @@
+/**
+ * The two configurations we compare on the same recordings:
+ *
+ *  base    – the realtime model as it ships: semantic VAD decides when the caller
+ *            is done, the model answers automatically, and whatever it writes into
+ *            the capture tool is taken as is.
+ *  saboot  – the same model and voice, with our harness in front: a short VAD
+ *            pause only marks a candidate turn end, our turn judge decides whether
+ *            to answer, transcription is primed with Indian names and places, and
+ *            every captured detail is parsed and validated before it is accepted.
+ */
+import { LOCALITIES } from "./entities.js";
+
+export type Mode = "base" | "saboot";
+
+const env: Record<string, string | undefined> = typeof process !== "undefined" ? process.env : {};
+export const REALTIME_MODEL = env.REALTIME_MODEL ?? "gpt-realtime-2.1";
+export const TRANSCRIBE_MODEL = env.TRANSCRIBE_MODEL ?? "gpt-4o-transcribe";
+export const VOICE = "marin";
+
+export const AGENT_INSTRUCTIONS = `You are Saboot, the voice support agent of a fictional Indian broadband provider, "LineOne Fibre".
+Speak like a friendly Hyderabad support agent: short sentences, natural Hinglish, mirror the caller's language.
+Your job on this call: collect the caller's registered mobile number, customer ID (two letters and eight digits),
+their locality and pincode, and their name, one at a time, then confirm the complaint is logged.
+Rules:
+- Ask for one detail at a time. Before asking, call set_expecting with the field you are about to ask for.
+- When the caller gives a detail, call record_detail with the field and exactly what they said (their words, not your guess).
+- If record_detail returns ok:false, ask a precise follow-up using its "problem" (e.g. "I got 9 digits, could you repeat the last part?").
+- If it returns ok:true, read back the "readback" value digit by digit in groups and ask "sahi hai?". Never read back a number in thousands or lakhs.
+- Never invent digits. Never finish a number for the caller.
+- Keep replies under 2 sentences.`;
+
+const recordDetail = {
+  type: "function",
+  name: "record_detail",
+  description: "Record a detail the caller just said. Pass their words verbatim; the system parses and validates them.",
+  parameters: {
+    type: "object",
+    properties: {
+      field: { type: "string", enum: ["mobile", "customer_id", "locality", "pincode", "name"] },
+      spoken: { type: "string", description: "The caller's words for this detail, verbatim" },
+    },
+    required: ["field", "spoken"],
+  },
+} as const;
+
+const setExpecting = {
+  type: "function",
+  name: "set_expecting",
+  description: "Tell the system which detail you are about to ask for.",
+  parameters: {
+    type: "object",
+    properties: { field: { type: "string", enum: ["mobile", "customer_id", "locality", "pincode", "name", "none"] } },
+    required: ["field"],
+  },
+} as const;
+
+export const TRANSCRIPTION_PROMPT =
+  "Indian broadband support call in Hinglish (Hindi and English mixed), sometimes Telugu or Tamil words. " +
+  "The caller reads phone numbers, pincodes and customer IDs digit by digit, often with pauses, 'double'/'triple', " +
+  "and corrections. Write digits exactly as spoken, keep Hindi words in Latin script.";
+
+export const TRANSCRIPTION_KEYWORDS = [
+  ...new Set(LOCALITIES.map((l) => l.name)),
+  "Hyderabad", "Secunderabad", "Bengaluru", "LineOne", "pincode", "double", "triple",
+  "Venkata", "Lakshmi", "Srinivas", "Sravani", "Mohammed", "Irfan", "Reddy", "Rao", "Naidu", "Kodali",
+];
+
+export function sessionConfig(mode: Mode) {
+  const base = {
+    type: "realtime" as const,
+    model: REALTIME_MODEL,
+    output_modalities: ["audio"],
+    instructions: AGENT_INSTRUCTIONS,
+    tools: [recordDetail, setExpecting],
+    tool_choice: "auto",
+    audio: {
+      input: {
+        format: { type: "audio/pcm", rate: 24000 },
+        transcription: { model: TRANSCRIBE_MODEL } as Record<string, unknown>,
+        turn_detection: {} as Record<string, unknown>,
+      },
+      output: { format: { type: "audio/pcm", rate: 24000 }, voice: VOICE },
+    },
+  };
+  if (mode === "base") {
+    base.audio.input.turn_detection = { type: "semantic_vad", eagerness: "auto", create_response: true, interrupt_response: true };
+  } else {
+    base.audio.input.transcription = { model: TRANSCRIBE_MODEL, prompt: TRANSCRIPTION_PROMPT };
+    base.audio.input.turn_detection = {
+      type: "server_vad",
+      threshold: 0.5,
+      prefix_padding_ms: 300,
+      silence_duration_ms: 350,
+      create_response: false,
+      interrupt_response: true,
+    };
+  }
+  return base;
+}
