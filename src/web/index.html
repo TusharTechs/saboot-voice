@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Saboot Voice</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="top">
+      <div class="brand">
+        <span class="mark" aria-hidden="true"></span>
+        <div>
+          <h1>Saboot Voice</h1>
+          <p>Gets Indian numbers, IDs and names right, and waits while you're still talking.</p>
+        </div>
+      </div>
+      <nav class="tabs" role="tablist">
+        <button role="tab" id="tab-call" aria-selected="true">Live call</button>
+        <button role="tab" id="tab-results" aria-selected="false">Same recordings, scored</button>
+      </nav>
+    </header>
+
+    <main id="view-call" class="call">
+      <section class="panel controls">
+        <div class="mode" role="radiogroup" aria-label="Harness">
+          <button role="radio" id="mode-base" aria-checked="false" data-mode="base">
+            <strong>Base model</strong><span>Realtime model as it ships</span>
+          </button>
+          <button role="radio" id="mode-saboot" aria-checked="true" data-mode="saboot">
+            <strong>Saboot</strong><span>Same model + our harness</span>
+          </button>
+        </div>
+        <button id="call" class="call-btn" type="button"><span class="dot"></span><span id="call-label">Start call</span></button>
+        <p id="status" class="status">Talk to LineOne Fibre support. Try reading your number with a pause in the middle.</p>
+        <div class="meter"><span>Reply time</span><strong id="latency">–</strong></div>
+        <div class="script">
+          <h3>Try saying</h3>
+          <ul>
+            <li>"Mera number hai nine eight four nine… <em>(pause)</em> …zero double one, three two seven"</li>
+            <li>"Customer ID H for Hyderabad, Y for Yamuna, two zero four eight… one seven three three"</li>
+            <li>"Kukatpally, pincode five zero… zero zero seven two"</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="panel convo">
+        <h2>Conversation</h2>
+        <ol id="transcript" class="transcript" aria-live="polite"></ol>
+      </section>
+
+      <section class="panel side">
+        <h2>Captured details</h2>
+        <dl id="captures" class="captures"></dl>
+        <h2>Turn decisions</h2>
+        <ol id="timeline" class="timeline"></ol>
+      </section>
+    </main>
+
+    <main id="view-results" class="results" hidden>
+      <section class="panel">
+        <div id="results-head" class="results-head"></div>
+        <div id="results-cards" class="cards"></div>
+        <h2>Every clip</h2>
+        <div class="table-wrap"><table id="results-table"></table></div>
+      </section>
+    </main>
+
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>
