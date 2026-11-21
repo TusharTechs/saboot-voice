@@ -27,7 +27,7 @@ const modes = (opt("modes") ?? "base,saboot").split(",") as Mode[];
 const only = opt("only")?.split(",");
 const repeat = Number(opt("repeat") ?? 1);
 const parallel = Number(opt("parallel") ?? 4);
-const TAIL_MS = 4000; // silence after the caller stops, so both modes get to answer
+const TAIL_MS = 6000; // silence after the caller stops, so both modes get to answer
 
 const clipsDir = resolve(import.meta.dirname, "clips");
 const labels: Record<string, Scenario & { speechEndMs: number; pauses: { startMs: number; endMs: number }[] }> = JSON.parse(

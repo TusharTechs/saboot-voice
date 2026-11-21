@@ -1,0 +1,5229 @@
+{
+  "model": "gpt-realtime-2.1",
+  "results": [
+    {
+      "id": "m03",
+      "mode": "base",
+      "rep": 0,
+      "field": "mobile",
+      "expect": "9876543210",
+      "speechEndMs": 7396,
+      "firstResponseMs": 4621,
+      "cutOff": true,
+      "replyLatencyMs": 1817,
+      "captured": "9876543210",
+      "correct": true,
+      "transcripts": [
+        "No ac sat che baj.",
+        "चार तीन दो एक शून्य."
+      ],
+      "timeline": [
+        {
+          "t": 1941,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 5864,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 5868,
+          "kind": "agent_start",
+          "text": "model took the turn"
+        },
+        {
+          "t": 6058,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 6364,
+          "kind": "transcript",
+          "text": "No ac sat che baj."
+        },
+        {
+          "t": 10451,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 10460,
+          "kind": "agent_start",
+          "text": "model took the turn"
+        },
+        {
+          "t": 10919,
+          "kind": "transcript",
+          "text": "चार तीन दो एक शून्य."
+        },
+        {
+          "t": 12472,
+          "kind": "capture",
+          "text": "mobile: 9876543210"
+        },
+        {
+          "t": 12798,
+          "kind": "agent_start",
+          "text": "model took the turn"
+        },
+        {
+          "t": 13655,
+          "kind": "agent_start",
+          "text": "model took the turn"
+        },
+        {
+          "t": 14363,
+          "kind": "agent_text",
+          "text": "Readback: 9 8 7 6 5 4 3 2 1 0 — sahi hai?\n\nAb customer ID bataiye, two letters aur eight digits."
+        }
+      ]
+    },
+    {
+      "id": "m03",
+      "mode": "saboot",
+      "rep": 0,
+      "field": "mobile",
+      "expect": "9876543210",
+      "speechEndMs": 7396,
+      "firstResponseMs": 8743,
+      "cutOff": false,
+      "replyLatencyMs": 1347,
+      "captured": "9876543210",
+      "correct": true,
+      "transcripts": [
+        "9 8 7 6",
+        "5.",
+        "चार तीन दो एक शून्य."
+      ],
+      "timeline": [
+        {
+          "t": 1988,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 4387,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 4409,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 4869,
+          "kind": "transcript",
+          "text": "9 8 7 6"
+        },
+        {
+          "t": 5287,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 5769,
+          "kind": "transcript",
+          "text": "5."
+        },
+        {
+          "t": 5771,
+          "kind": "wait",
+          "text": "number incomplete: 5 of 10 digits"
+        },
+        {
+          "t": 6086,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 9289,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 9754,
+          "kind": "transcript",
+          "text": "चार तीन दो एक शून्य."
+        },
+        {
+          "t": 9754,
+          "kind": "respond",
+          "text": "complete"
+        },
+        {
+          "t": 10044,
+          "kind": "agent_start",
+          "text": "agent answering"
+        },
+        {
+          "t": 12014,
+          "kind": "agent_text",
+          "text": "Bas ek moment, main number ko note karke verify kar leta hoon."
+        },
+        {
+          "t": 12030,
+          "kind": "capture",
+          "text": "mobile: 9876543210"
+        },
+        {
+          "t": 12350,
+          "kind": "agent_start",
+          "text": "agent answering"
+        },
+        {
+          "t": 13430,
+          "kind": "agent_text",
+          "text": "Readback: 9 8 7 6 5, 4 3 2 1 0 — sahi hai?"
+        }
+      ]
+    },
+    {
+      "id": "m01",
+      "mode": "saboot",
+      "rep": 0,
+      "field": "mobile",
+      "expect": "9849011327",
+      "speechEndMs": 9225,
+      "firstResponseMs": 10758,
+      "cutOff": false,
+      "replyLatencyMs": 1533,
+      "captured": "9849011327",
+      "correct": true,
+      "transcripts": [
+        "Haan, मेरा नंबर है",
+        "nine eight four nine",
+        "Zero double one three two seven."
+      ],
+      "timeline": [
+        {
+          "t": 2061,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 4363,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 4370,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 4873,
+          "kind": "transcript",
+          "text": "Haan, मेरा नंबर है"
+        },
+        {
+          "t": 6866,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 7268,
+          "kind": "transcript",
+          "text": "nine eight four nine"
+        },
+        {
+          "t": 7269,
+          "kind": "wait",
+          "text": "number incomplete: 4 of 10 digits"
+        },
+        {
+          "t": 7858,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 11167,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 11719,
+          "kind": "transcript",
+          "text": "Zero double one three two seven."
+        },
+        {
+          "t": 11719,
+          "kind": "respond",
+          "text": "complete"
+        },
+        {
+          "t": 12019,
+          "kind": "agent_start",
+          "text": "agent answering"
+        },
+        {
+          "t": 12497,
+          "kind": "capture",
+          "text": "mobile: 9849011327"
+        },
+        {
+          "t": 12818,
+          "kind": "agent_start",
+          "text": "agent answering"
+        },
+        {
+          "t": 13334,
+          "kind": "agent_text",
+          "text": "Readback: 9 8 4 9 0, and 1 1 3 2 7 — sahi hai?"
+        }
+      ]
+    },
+    {
+      "id": "m01",
+      "mode": "base",
+      "rep": 0,
+      "field": "mobile",
+      "expect": "9849011327",
+      "speechEndMs": 9225,
+      "firstResponseMs": 6004,
+      "cutOff": true,
+      "replyLatencyMs": 961,
+      "captured": "9849011327",
+      "correct": true,
+      "transcripts": [
+        "हां, मेरा नंबर है 9849.",
+        "Zero double one three two seven"
+      ],
+      "timeline": [
+        {
+          "t": 2144,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 7321,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 7332,
+          "kind": "agent_start",
+          "text": "model took the turn"
+        },
+        {
+          "t": 7887,
+          "kind": "transcript",
+          "text": "हां, मेरा नंबर है 9849."
+        },
+        {
+          "t": 7957,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 11505,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 11514,
+          "kind": "agent_start",
+          "text": "model took the turn"
+        },
+        {
+          "t": 12151,
+          "kind": "transcript",
+          "text": "Zero double one three two seven"
+        },
+        {
+          "t": 12386,
+          "kind": "agent_text",
+          "text": "Thik hai, main number capture kar raha hoon, bas ek second."
+        },
+        {
+          "t": 12391,
+          "kind": "capture",
+          "text": "mobile: 9849011327"
+        },
+        {
+          "t": 12749,
+          "kind": "agent_start",
+          "text": "model took the turn"
+        },
+        {
+          "t": 13617,
+          "kind": "agent_start",
+          "text": "model took the turn"
+        },
+        {
+          "t": 14387,
+          "kind": "agent_text",
+          "text": "Number readback: 9 8 4 9, 0 1 1 3 2 7 — sahi hai?\n\nAb please apna customer ID bataiye, 2 letters aur 8 digits."
+        }
+      ]
+    },
+    {
+      "id": "m02",
+      "mode": "saboot",
+      "rep": 0,
+      "field": "mobile",
+      "expect": "7032685541",
+      "speechEndMs": 13076,
+      "firstResponseMs": 14385,
+      "cutOff": false,
+      "replyLatencyMs": 1309,
+      "captured": "7032685541",
+      "correct": true,
+      "transcripts": [
+        "number likh lijiye",
+        "seven zero three two",
+        "date second",
+        "six eight",
+        "double five",
+        "Four, One."
+      ],
+      "timeline": [
+        {
+          "t": 2061,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 4062,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 4160,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 4603,
+          "kind": "transcript",
+          "text": "number likh lijiye"
+        },
+        {
+          "t": 6863,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 7731,
+          "kind": "transcript",
+          "text": "seven zero three two"
+        },
+        {
+          "t": 7732,
+          "kind": "wait",
+          "text": "number incomplete: 4 of 10 digits"
+        },
+        {
+          "t": 8062,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 9562,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 9942,
+          "kind": "transcript",
+          "text": "date second"
+        },
+        {
+          "t": 9942,
+          "kind": "wait",
+          "text": "number incomplete: 4 of 10 digits"
+        },
+        {
+          "t": 10165,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 11959,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 12068,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 12473,
+          "kind": "transcript",
+          "text": "six eight"
+        },
+        {
+          "t": 13360,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 13562,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 13840,
+          "kind": "transcript",
+          "text": "double five"
+        },
+        {
+          "t": 14900,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 15321,
+          "kind": "transcript",
+          "text": "Four, One."
+        },
+        {
+          "t": 15323,
+          "kind": "respond",
+          "text": "complete"
+        },
+        {
+          "t": 15583,
+          "kind": "agent_start",
+          "text": "agent answering"
+        },
+        {
+          "t": 20219,
+          "kind": "agent_text",
+          "text": "Okay, got that—let me just check and read it back clearly."
+        },
+        {
+          "t": 20225,
+          "kind": "capture",
+          "text": "mobile: 7032685541"
+        },
+        {
+          "t": 20518,
+          "kind": "agent_start",
+          "text": "agent answering"
+        },
+        {
+          "t": 21025,
+          "kind": "agent_text",
+          "text": "Readback: seven zero three two six, eight five five four one — sahi hai?"
+        }
+      ]
+    },
+    {
+      "id": "m02",
+      "mode": "base",
+      "rep": 0,
+      "field": "mobile",
+      "expect": "7032685541",
+      "speechEndMs": 13076,
+      "firstResponseMs": 14050,
+      "cutOff": false,
+      "replyLatencyMs": 974,
+      "captured": "703286685541",
+      "correct": false,
+      "transcripts": [
+        "Number Mik Lijie 7032 8 6 8 5 5 4 1"
+      ],
+      "timeline": [
+        {
+          "t": 2188,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 15340,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 15348,
+          "kind": "agent_start",
+          "text": "model took the turn"
+        },
+        {
+          "t": 15983,
+          "kind": "transcript",
+          "text": "Number Mik Lijie 7032 8 6 8 5 5 4 1"
+        },
+        {
+          "t": 18265,
+          "kind": "agent_text",
+          "text": "Theek hai, main aapke diye gaye number ko note karke verify karta hoon."
+        },
+        {
+          "t": 18271,
+          "kind": "capture",
+          "text": "mobile: 703286685541"
+        },
+        {
+          "t": 18599,
+          "kind": "agent_start",
+          "text": "model took the turn"
+        },
+        {
+          "t": 19568,
+          "kind": "agent_text",
+          "text": "Aapka number read back: 7 0 3 2, 8 6, 6 8, 5 5, 4 1 — sahi hai?"
+        }
+      ]
+    },
+    {
+      "id": "m04",
+      "mode": "base",
+      "rep": 0,
+      "field": "mobile",
+      "expect": "9852710063",
+      "speechEndMs": 7879,
+      "firstResponseMs": 8763,
+      "cutOff": false,
+      "replyLatencyMs": 884,
+      "captured": "9852710063",
+      "correct": true,
+      "transcripts": [
+        "98, 52, 71, 00, 63"
+      ],
+      "timeline": [
+        {
+          "t": 1854,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 9947,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 9955,
+          "kind": "agent_start",
+          "text": "model took the turn"
+        },
+        {
+          "t": 10465,
+          "kind": "transcript",
+          "text": "98, 52, 71, 00, 63"
+        },
+        {
+          "t": 12280,
+          "kind": "agent_text",
+          "text": "Thik hai, main number note karke verify karta hoon."
+        },
+        {
+          "t": 12288,
+          "kind": "capture",
+          "text": "mobile: 9852710063"
+        },
+        {
+          "t": 12581,
+          "kind": "agent_start",
+          "text": "model took the turn"
+        },
+        {
+          "t": 13122,
+          "kind": "agent_text",
+          "text": "Readback: 9 8 5 2 7 1 0 0 6 3 — sahi hai?"
+        }
+      ]
+    },
+    {
+      "id": "m04",
+      "mode": "saboot",
+      "rep": 0,
+      "field": "mobile",
+      "expect": "9852710063",
+      "speechEndMs": 7879,
+      "firstResponseMs": 9110,
+      "cutOff": false,
+      "replyLatencyMs": 1231,
+      "captured": "9852710063",
+      "correct": true,
+      "transcripts": [
+        "98",
+        "fifty two",
+        "71.",
+        "Double zero sixty three."
+      ],
+      "timeline": [
+        {
+          "t": 1882,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 3382,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 3578,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 3732,
+          "kind": "transcript",
+          "text": "98"
+        },
+        {
+          "t": 4783,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 5143,
+          "kind": "transcript",
+          "text": "fifty two"
+        },
+        {
+          "t": 5143,
+          "kind": "wait",
+          "text": "number incomplete: 4 of 10 digits"
+        },
+        {
+          "t": 5881,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 7080,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 7382,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 7471,
+          "kind": "transcript",
+          "text": "71."
+        },
+        {
+          "t": 9681,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 10014,
+          "kind": "transcript",
+          "text": "Double zero sixty three."
+        },
+        {
+          "t": 10014,
+          "kind": "respond",
+          "text": "complete"
+        },
+        {
+          "t": 10304,
+          "kind": "agent_start",
+          "text": "agent answering"
+        },
+        {
+          "t": 11632,
+          "kind": "capture",
+          "text": "mobile: 9852710063"
+        },
+        {
+          "t": 11960,
+          "kind": "agent_start",
+          "text": "agent answering"
+        },
+        {
+          "t": 12422,
+          "kind": "agent_text",
+          "text": "Readback: 98527 10063 — sahi hai?"
+        }
+      ]
+    },
+    {
+      "id": "m06",
+      "mode": "base",
+      "rep": 0,
+      "field": "mobile",
+      "expect": "9100456888",
+      "speechEndMs": 7752,
+      "firstResponseMs": 3040,
+      "cutOff": true,
+      "replyLatencyMs": 4037,
+      "correct": false,
+      "transcripts": [
+        "Plaf 9-1.",
+        "nine one double zero. Four five six, triple eight"
+      ],
+      "timeline": [
+        {
+          "t": 1906,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 4169,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 4176,
+          "kind": "agent_start",
+          "text": "model took the turn"
+        },
+        {
+          "t": 4211,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 4686,
+          "kind": "transcript",
+          "text": "Plaf 9-1."
+        },
+        {
+          "t": 12920,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 12925,
+          "kind": "agent_start",
+          "text": "model took the turn"
+        },
+        {
+          "t": 13615,
+          "kind": "transcript",
+          "text": "nine one double zero. Four five six, triple eight"
+        }
+      ]
+    },
+    {
+      "id": "m06",
+      "mode": "saboot",
+      "rep": 0,
+      "field": "mobile",
+      "expect": "9100456888",
+      "speechEndMs": 7752,
+      "firstResponseMs": 8938,
+      "cutOff": false,
+      "replyLatencyMs": 1186,
+      "captured": "9100456888",
+      "correct": true,
+      "transcripts": [
+        "191.",
+        "nine one double zero",
+        "Four five six triple eight."
+      ],
+      "timeline": [
+        {
+          "t": 1979,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 3988,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 4285,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 4326,
+          "kind": "transcript",
+          "text": "191."
+        },
+        {
+          "t": 6190,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 6616,
+          "kind": "transcript",
+          "text": "nine one double zero"
+        },
+        {
+          "t": 6616,
+          "kind": "wait",
+          "text": "number incomplete: 7 of 10 digits"
+        },
+        {
+          "t": 7080,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 9480,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 9843,
+          "kind": "transcript",
+          "text": "Four five six triple eight."
+        },
+        {
+          "t": 9843,
+          "kind": "respond",
+          "text": "complete"
+        },
+        {
+          "t": 10132,
+          "kind": "agent_start",
+          "text": "agent answering"
+        },
+        {
+          "t": 13889,
+          "kind": "capture",
+          "text": "mobile: 9100456888"
+        },
+        {
+          "t": 14202,
+          "kind": "agent_start",
+          "text": "agent answering"
+        },
+        {
+          "t": 14627,
+          "kind": "agent_text",
+          "text": "Readback: nine one zero zero four, five six eight eight eight — sahi hai?"
+        }
+      ]
+    },
+    {
+      "id": "m05",
+      "mode": "base",
+      "rep": 0,
+      "field": "mobile",
+      "expect": "8801245679",
+      "speechEndMs": 12178,
+      "firstResponseMs": 5078,
+      "cutOff": true,
+      "replyLatencyMs": 883,
+      "captured": "8801245679",
+      "correct": true,
+      "transcripts": [
+        "8801 23",
+        "No, no: 8801 24 5679."
+      ],
+      "timeline": [
+        {
+          "t": 1760,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 6172,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 6179,
+          "kind": "agent_start",
+          "text": "model took the turn"
+        },
+        {
+          "t": 6462,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 6797,
+          "kind": "transcript",
+          "text": "8801 23"
+        },
+        {
+          "t": 14154,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 14162,
+          "kind": "agent_start",
+          "text": "model took the turn"
+        },
+        {
+          "t": 14831,
+          "kind": "transcript",
+          "text": "No, no: 8801 24 5679."
+        },
+        {
+          "t": 15080,
+          "kind": "agent_text",
+          "text": "Okay, I’ll capture that exactly as you said and then read it back for confirmation."
+        },
+        {
+          "t": 15083,
+          "kind": "capture",
+          "text": "mobile: 8801245679"
+        },
+        {
+          "t": 15394,
+          "kind": "agent_start",
+          "text": "model took the turn"
+        },
+        {
+          "t": 17242,
+          "kind": "agent_text",
+          "text": "Readback: 8 8 0 1, 2 4 5, 6 7 9 — sahi hai?"
+        }
+      ]
+    },
+    {
+      "id": "m05",
+      "mode": "saboot",
+      "rep": 0,
+      "field": "mobile",
+      "expect": "8801245679",
+      "speechEndMs": 12178,
+      "firstResponseMs": 13391,
+      "cutOff": false,
+      "replyLatencyMs": 1213,
+      "captured": "8801245679",
+      "correct": true,
+      "transcripts": [
+        "Eight eight zero one.",
+        "two three",
+        "नहीं नहीं.",
+        "880124.",
+        "Five six seven nine."
+      ],
+      "timeline": [
+        {
+          "t": 1801,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 4401,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 4703,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 4763,
+          "kind": "transcript",
+          "text": "Eight eight zero one."
+        },
+        {
+          "t": 5804,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 6171,
+          "kind": "transcript",
+          "text": "two three"
+        },
+        {
+          "t": 6171,
+          "kind": "wait",
+          "text": "number incomplete: 6 of 10 digits"
+        },
+        {
+          "t": 6501,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 7711,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 7713,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 8051,
+          "kind": "transcript",
+          "text": "नहीं नहीं."
+        },
+        {
+          "t": 10604,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 11034,
+          "kind": "transcript",
+          "text": "880124."
+        },
+        {
+          "t": 11034,
+          "kind": "wait",
+          "text": "number incomplete: 6 of 10 digits"
+        },
+        {
+          "t": 11203,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 13907,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 14268,
+          "kind": "transcript",
+          "text": "Five six seven nine."
+        },
+        {
+          "t": 14269,
+          "kind": "respond",
+          "text": "complete"
+        },
+        {
+          "t": 14534,
+          "kind": "agent_start",
+          "text": "agent answering"
+        },
+        {
+          "t": 16309,
+          "kind": "capture",
+          "text": "mobile: 8801245679"
+        },
+        {
+          "t": 16596,
+          "kind": "agent_start",
+          "text": "agent answering"
+        },
+        {
+          "t": 17026,
+          "kind": "agent_text",
+          "text": "Readback: 8 8 0 1 2, then 4 5 6 7 9 — sahi hai?"
+        }
+      ]
+    },
+    {
+      "id": "m07",
+      "mode": "base",
+      "rep": 0,
+      "field": "mobile",
+      "expect": "6304229188",
+      "speechEndMs": 7724,
+      "firstResponseMs": 3763,
+      "cutOff": true,
+      "replyLatencyMs": 2044,
+      "captured": "229188",
+      "correct": false,
+      "transcripts": [
+        "ہاں جی، 6304.",
+        "Matlab",
+        "229188"
+      ],
+      "timeline": [
+        {
+          "t": 1815,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 4824,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 4831,
+          "kind": "agent_start",
+          "text": "model took the turn"
+        },
+        {
+          "t": 5369,
+          "kind": "transcript",
+          "text": "ہاں جی، 6304."
+        },
+        {
+          "t": 5821,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 5850,
+          "kind": "agent_text",
+          "text": "Alright, I’ll note exactly what you said and then we’ll confirm the digits together."
+        },
+        {
+          "t": 5857,
+          "kind": "capture",
+          "text": "undefined: "
+        },
+        {
+          "t": 6155,
+          "kind": "agent_start",
+          "text": "model took the turn"
+        },
+        {
+          "t": 6558,
+          "kind": "capture",
+          "text": "mobile: 6304"
+        },
+        {
+          "t": 6877,
+          "kind": "agent_start",
+          "text": "model took the turn"
+        },
+        {
+          "t": 7136,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 7173,
+          "kind": "agent_text",
+          "text": "Readback: 6 3 0 4 — sahi hai"
+        },
+        {
+          "t": 7207,
+          "kind": "agent_start",
+          "text": "model took the turn"
+        },
+        {
+          "t": 7276,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 7591,
+          "kind": "transcript",
+          "text": "Matlab"
+        },
+        {
+          "t": 10827,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 10836,
+          "kind": "agent_start",
+          "text": "model took the turn"
+        },
+        {
+          "t": 11293,
+          "kind": "transcript",
+          "text": "229188"
+        },
+        {
+          "t": 12401,
+          "kind": "agent_text",
+          "text": "Thanks, I’ll record exactly what you just said and check if it fits the mobile format."
+        },
+        {
+          "t": 12406,
+          "kind": "capture",
+          "text": "mobile: 229188"
+        },
+        {
+          "t": 12712,
+          "kind": "agent_start",
+          "text": "model took the turn"
+        },
+        {
+          "t": 13043,
+          "kind": "agent_text",
+          "text": "Readback: 2 2 9 1 8 8 — sahi hai?"
+        }
+      ]
+    },
+    {
+      "id": "m07",
+      "mode": "saboot",
+      "rep": 0,
+      "field": "mobile",
+      "expect": "6304229188",
+      "speechEndMs": 7724,
+      "firstResponseMs": 9055,
+      "cutOff": false,
+      "replyLatencyMs": 1331,
+      "captured": "6304229188",
+      "correct": true,
+      "transcripts": [
+        "Haan ji, six three zero four.",
+        "Matlab.",
+        "229188."
+      ],
+      "timeline": [
+        {
+          "t": 1997,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 4800,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 5285,
+          "kind": "transcript",
+          "text": "Haan ji, six three zero four."
+        },
+        {
+          "t": 5286,
+          "kind": "wait",
+          "text": "number incomplete: 4 of 10 digits"
+        },
+        {
+          "t": 5997,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 6999,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 7396,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 7457,
+          "kind": "transcript",
+          "text": "Matlab."
+        },
+        {
+          "t": 9498,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 9979,
+          "kind": "transcript",
+          "text": "229188."
+        },
+        {
+          "t": 9979,
+          "kind": "respond",
+          "text": "complete"
+        },
+        {
+          "t": 10266,
+          "kind": "agent_start",
+          "text": "agent answering"
+        },
+        {
+          "t": 10958,
+          "kind": "agent_text",
+          "text": "Okay, thanks—I'll record exactly what you said and then read it back for confirmation."
+        },
+        {
+          "t": 10964,
+          "kind": "capture",
+          "text": "mobile: 6304229188"
+        },
+        {
+          "t": 11262,
+          "kind": "agent_start",
+          "text": "agent answering"
+        },
+        {
+          "t": 11778,
+          "kind": "agent_text",
+          "text": "Readback: 6 3 0 4 2, 2 9 1 8 8 — sahi hai?"
+        }
+      ]
+    },
+    {
+      "id": "m09",
+      "mode": "base",
+      "rep": 0,
+      "field": "mobile",
+      "expect": "7899001426",
+      "speechEndMs": 8591,
+      "firstResponseMs": 3709,
+      "cutOff": true,
+      "replyLatencyMs": 954,
+      "captured": "7899001426",
+      "correct": true,
+      "transcripts": [
+        "seven eight double nine",
+        "Zero zero one four two six"
+      ],
+      "timeline": [
+        {
+          "t": 1920,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 4934,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 4944,
+          "kind": "agent_start",
+          "text": "model took the turn"
+        },
+        {
+          "t": 5348,
+          "kind": "transcript",
+          "text": "seven eight double nine"
+        },
+        {
+          "t": 5638,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 5703,
+          "kind": "agent_text",
+          "text": "Okay, thanks—I'll just capture that exactly and check what’s missing before we proceed."
+        },
+        {
+          "t": 10772,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 10780,
+          "kind": "agent_start",
+          "text": "model took the turn"
+        },
+        {
+          "t": 11257,
+          "kind": "capture",
+          "text": "mobile: 7899001426"
+        },
+        {
+          "t": 11267,
+          "kind": "transcript",
+          "text": "Zero zero one four two six"
+        },
+        {
+          "t": 11616,
+          "kind": "agent_start",
+          "text": "model took the turn"
+        },
+        {
+          "t": 12098,
+          "kind": "agent_text",
+          "text": "Readback: 7 8 9 9, 0 0, 1 4 2 6 — sahi hai?"
+        }
+      ]
+    },
+    {
+      "id": "m09",
+      "mode": "saboot",
+      "rep": 0,
+      "field": "mobile",
+      "expect": "7899001426",
+      "speechEndMs": 8591,
+      "firstResponseMs": 9954,
+      "cutOff": false,
+      "replyLatencyMs": 1363,
+      "captured": "7899001426",
+      "correct": true,
+      "transcripts": [
+        "seven eight",
+        "double nine",
+        "zero zero one four",
+        "Two six."
+      ],
+      "timeline": [
+        {
+          "t": 1990,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 3394,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 3397,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 3820,
+          "kind": "transcript",
+          "text": "seven eight"
+        },
+        {
+          "t": 4497,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 4905,
+          "kind": "transcript",
+          "text": "double nine"
+        },
+        {
+          "t": 4905,
+          "kind": "wait",
+          "text": "number incomplete: 4 of 10 digits"
+        },
+        {
+          "t": 5700,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 9195,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 9293,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 9825,
+          "kind": "transcript",
+          "text": "zero zero one four"
+        },
+        {
+          "t": 10491,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 10939,
+          "kind": "transcript",
+          "text": "Two six."
+        },
+        {
+          "t": 10940,
+          "kind": "respond",
+          "text": "complete"
+        },
+        {
+          "t": 11243,
+          "kind": "agent_start",
+          "text": "agent answering"
+        },
+        {
+          "t": 13036,
+          "kind": "agent_text",
+          "text": "Theek hai, main is number ko validate karke phir readback karta hoon."
+        },
+        {
+          "t": 13043,
+          "kind": "capture",
+          "text": "mobile: 7899001426"
+        },
+        {
+          "t": 13374,
+          "kind": "agent_start",
+          "text": "agent answering"
+        },
+        {
+          "t": 13847,
+          "kind": "agent_text",
+          "text": "Readback: 7 8 9 9 0, 0 1 4 2 6 — sahi hai?"
+        }
+      ]
+    },
+    {
+      "id": "m08",
+      "mode": "base",
+      "rep": 0,
+      "field": "mobile",
+      "expect": "9550123456",
+      "speechEndMs": 10311,
+      "firstResponseMs": 11396,
+      "cutOff": false,
+      "replyLatencyMs": 1085,
+      "captured": "9550123456",
+      "correct": true,
+      "transcripts": [
+        "నా నంబర్ ఉంది. 9550 123456."
+      ],
+      "timeline": [
+        {
+          "t": 1900,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 12609,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 12616,
+          "kind": "agent_start",
+          "text": "model took the turn"
+        },
+        {
+          "t": 13090,
+          "kind": "transcript",
+          "text": "నా నంబర్ ఉంది. 9550 123456."
+        },
+        {
+          "t": 13660,
+          "kind": "agent_text",
+          "text": "Got it, I’m just going to record that exactly as you said and then read it back for confirmation."
+        },
+        {
+          "t": 13663,
+          "kind": "capture",
+          "text": "mobile: 9550123456"
+        },
+        {
+          "t": 13967,
+          "kind": "agent_start",
+          "text": "model took the turn"
+        },
+        {
+          "t": 14643,
+          "kind": "agent_text",
+          "text": "Readback: 9 5 5 0, 1 2 3 4 5 6 — sahi hai?"
+        }
+      ]
+    },
+    {
+      "id": "m08",
+      "mode": "saboot",
+      "rep": 0,
+      "field": "mobile",
+      "expect": "9550123456",
+      "speechEndMs": 10311,
+      "firstResponseMs": 11702,
+      "cutOff": false,
+      "replyLatencyMs": 1391,
+      "captured": "9550123456",
+      "correct": true,
+      "transcripts": [
+        "Na number undi.",
+        "Nine five five zero",
+        "One two three four five six."
+      ],
+      "timeline": [
+        {
+          "t": 1903,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 4309,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 4503,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 4715,
+          "kind": "transcript",
+          "text": "Na number undi."
+        },
+        {
+          "t": 7208,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 7655,
+          "kind": "transcript",
+          "text": "Nine five five zero"
+        },
+        {
+          "t": 7655,
+          "kind": "wait",
+          "text": "number incomplete: 4 of 10 digits"
+        },
+        {
+          "t": 8102,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 12107,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 12619,
+          "kind": "transcript",
+          "text": "One two three four five six."
+        },
+        {
+          "t": 12619,
+          "kind": "respond",
+          "text": "complete"
+        },
+        {
+          "t": 12915,
+          "kind": "agent_start",
+          "text": "agent answering"
+        },
+        {
+          "t": 14605,
+          "kind": "agent_text",
+          "text": "Okay, let me capture that exactly and then I’ll read it back for confirmation."
+        },
+        {
+          "t": 14611,
+          "kind": "capture",
+          "text": "mobile: 9550123456"
+        },
+        {
+          "t": 14985,
+          "kind": "agent_start",
+          "text": "agent answering"
+        },
+        {
+          "t": 15783,
+          "kind": "agent_start",
+          "text": "agent answering"
+        },
+        {
+          "t": 16463,
+          "kind": "agent_text",
+          "text": "Readback: 9 5 5 0 1, 2 3 4 5 6 — sahi hai?\n\nAb customer ID bataiye, two letters and eight digits."
+        }
+      ]
+    },
+    {
+      "id": "m10",
+      "mode": "base",
+      "rep": 0,
+      "field": "mobile",
+      "expect": "9782234567",
+      "speechEndMs": 8534,
+      "firstResponseMs": 4592,
+      "cutOff": true,
+      "replyLatencyMs": 853,
+      "captured": "9782234567",
+      "correct": true,
+      "transcripts": [
+        "Noć sat at dodo.",
+        "तीन चार पाँच छः सात"
+      ],
+      "timeline": [
+        {
+          "t": 1736,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 5664,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 5675,
+          "kind": "agent_start",
+          "text": "model took the turn"
+        },
+        {
+          "t": 6192,
+          "kind": "transcript",
+          "text": "Noć sat at dodo."
+        },
+        {
+          "t": 6301,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 10463,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 10470,
+          "kind": "agent_start",
+          "text": "model took the turn"
+        },
+        {
+          "t": 11008,
+          "kind": "transcript",
+          "text": "तीन चार पाँच छः सात"
+        },
+        {
+          "t": 11426,
+          "kind": "agent_text",
+          "text": "Okay, thanks—let me quickly note what you said and check it."
+        },
+        {
+          "t": 11430,
+          "kind": "capture",
+          "text": "mobile: 9782234567"
+        },
+        {
+          "t": 11766,
+          "kind": "agent_start",
+          "text": "model took the turn"
+        },
+        {
+          "t": 12759,
+          "kind": "agent_text",
+          "text": "Readback: 9 7 8, 2 2 3, 4 5 6 7 — sahi hai?"
+        }
+      ]
+    },
+    {
+      "id": "m10",
+      "mode": "saboot",
+      "rep": 0,
+      "field": "mobile",
+      "expect": "9782234567",
+      "speechEndMs": 8534,
+      "firstResponseMs": 11578,
+      "cutOff": false,
+      "replyLatencyMs": 3044,
+      "correct": false,
+      "transcripts": [
+        "No saat aath.",
+        "do do",
+        "तीन चार पाँच छे सात"
+      ],
+      "timeline": [
+        {
+          "t": 1824,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 4128,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 4320,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 4768,
+          "kind": "transcript",
+          "text": "No saat aath."
+        },
+        {
+          "t": 5424,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 6023,
+          "kind": "transcript",
+          "text": "do do"
+        },
+        {
+          "t": 6023,
+          "kind": "wait",
+          "text": "number incomplete: 4 of 10 digits"
+        },
+        {
+          "t": 6331,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 10224,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 10877,
+          "kind": "transcript",
+          "text": "तीन चार पाँच छे सात"
+        },
+        {
+          "t": 10877,
+          "kind": "wait",
+          "text": "number incomplete: 9 of 10 digits"
+        },
+        {
+          "t": 12475,
+          "kind": "respond",
+          "text": "gave up waiting at 9 of 10 digits; ask for the rest"
+        },
+        {
+          "t": 12740,
+          "kind": "agent_start",
+          "text": "agent answering"
+        },
+        {
+          "t": 16118,
+          "kind": "agent_text",
+          "text": "Ek second, main number ko record karke verify kar deta hoon."
+        },
+        {
+          "t": 16123,
+          "kind": "capture",
+          "text": "mobile: ✗ only 9 of 10 digits heard"
+        },
+        {
+          "t": 16409,
+          "kind": "agent_start",
+          "text": "agent answering"
+        }
+      ]
+    },
+    {
+      "id": "c01",
+      "mode": "base",
+      "rep": 0,
+      "field": "customer_id",
+      "expect": "HY20481733",
+      "speechEndMs": 10630,
+      "firstResponseMs": 4260,
+      "cutOff": true,
+      "replyLatencyMs": 828,
+      "captured": "HY20481733",
+      "correct": true,
+      "transcripts": [
+        "Customer ID: KHY。",
+        "Two zero four eight, one seven three three."
+      ],
+      "timeline": [
+        {
+          "t": 1826,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 5327,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 5335,
+          "kind": "agent_start",
+          "text": "model took the turn"
+        },
+        {
+          "t": 5625,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 5743,
+          "kind": "transcript",
+          "text": "Customer ID: KHY。"
+        },
+        {
+          "t": 12523,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 12533,
+          "kind": "agent_start",
+          "text": "model took the turn"
+        },
+        {
+          "t": 13005,
+          "kind": "transcript",
+          "text": "Two zero four eight, one seven three three."
+        },
+        {
+          "t": 13470,
+          "kind": "agent_text",
+          "text": "Thik hai, main is detail ko note kar raha hoon, phir aap se confirm karunga."
+        },
+        {
+          "t": 13765,
+          "kind": "agent_start",
+          "text": "model took the turn"
+        },
+        {
+          "t": 14448,
+          "kind": "capture",
+          "text": "customer_id: HY20481733"
+        },
+        {
+          "t": 14747,
+          "kind": "agent_start",
+          "text": "model took the turn"
+        },
+        {
+          "t": 15207,
+          "kind": "agent_text",
+          "text": "Readback: H Y, 2 0 4 8, 1 7 3 3 — sahi hai?"
+        }
+      ]
+    },
+    {
+      "id": "c01",
+      "mode": "saboot",
+      "rep": 0,
+      "field": "customer_id",
+      "expect": "HY20481733",
+      "speechEndMs": 10630,
+      "firstResponseMs": 4747,
+      "cutOff": true,
+      "replyLatencyMs": 1396,
+      "correct": false,
+      "transcripts": [
+        "Customer ID KHY.",
+        "Two zero four eight.",
+        "One seven three three."
+      ],
+      "timeline": [
+        {
+          "t": 2006,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 5211,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 5674,
+          "kind": "transcript",
+          "text": "Customer ID KHY."
+        },
+        {
+          "t": 5674,
+          "kind": "respond",
+          "text": "complete"
+        },
+        {
+          "t": 5807,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 5964,
+          "kind": "agent_start",
+          "text": "agent answering"
+        },
+        {
+          "t": 7969,
+          "kind": "agent_text",
+          "text": "I’m going to note what you said and check if it’s complete."
+        },
+        {
+          "t": 7974,
+          "kind": "capture",
+          "text": "customer_id: ✗ the two letters at the start weren't clear"
+        },
+        {
+          "t": 8211,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 8266,
+          "kind": "agent_start",
+          "text": "agent answering"
+        },
+        {
+          "t": 8659,
+          "kind": "transcript",
+          "text": "Two zero four eight."
+        },
+        {
+          "t": 9209,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 9542,
+          "kind": "agent_start",
+          "text": "agent answering"
+        },
+        {
+          "t": 10140,
+          "kind": "agent_text",
+          "text": "Sorry, the two letters at the start weren’t clear. Please repeat the first two letters of your customer ID, clearly, then the 8 digits."
+        },
+        {
+          "t": 12510,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 12953,
+          "kind": "transcript",
+          "text": "One seven three three."
+        },
+        {
+          "t": 12953,
+          "kind": "respond",
+          "text": "complete"
+        },
+        {
+          "t": 13243,
+          "kind": "agent_start",
+          "text": "agent answering"
+        },
+        {
+          "t": 15842,
+          "kind": "agent_text",
+          "text": "I’ll capture what you just said and see what’s missing."
+        },
+        {
+          "t": 15846,
+          "kind": "capture",
+          "text": "customer_id: ✗ the two letters at the start weren't clear"
+        },
+        {
+          "t": 16156,
+          "kind": "agent_start",
+          "text": "agent answering"
+        },
+        {
+          "t": 16919,
+          "kind": "agent_start",
+          "text": "agent answering"
+        },
+        {
+          "t": 17557,
+          "kind": "agent_text",
+          "text": "The two letters at the start still weren’t clear. Please say the first two letters of your customer ID, like “H Y”, then we’ll continue with the 8 digits."
+        }
+      ]
+    },
+    {
+      "id": "c02",
+      "mode": "base",
+      "rep": 0,
+      "field": "customer_id",
+      "expect": "SB55012944",
+      "speechEndMs": 10644,
+      "firstResponseMs": 4671,
+      "cutOff": true,
+      "replyLatencyMs": 941,
+      "captured": "SB55012944",
+      "correct": true,
+      "transcripts": [
+        "S por Sita, B por Bombay.",
+        "Five",
+        "5. 01 29 44"
+      ],
+      "timeline": [
+        {
+          "t": 1912,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 5883,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 5891,
+          "kind": "agent_start",
+          "text": "model took the turn"
+        },
+        {
+          "t": 6330,
+          "kind": "transcript",
+          "text": "S por Sita, B por Bombay."
+        },
+        {
+          "t": 6421,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 7327,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 7332,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 7670,
+          "kind": "transcript",
+          "text": "Five"
+        },
+        {
+          "t": 12793,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 12805,
+          "kind": "agent_start",
+          "text": "model took the turn"
+        },
+        {
+          "t": 13521,
+          "kind": "transcript",
+          "text": "5. 01 29 44"
+        },
+        {
+          "t": 13876,
+          "kind": "agent_text",
+          "text": "Theek hai, main aapke customer ID ko validate karke read back karta hoon."
+        },
+        {
+          "t": 13890,
+          "kind": "capture",
+          "text": "customer_id: SB55012944"
+        },
+        {
+          "t": 14215,
+          "kind": "agent_start",
+          "text": "model took the turn"
+        },
+        {
+          "t": 15837,
+          "kind": "agent_text",
+          "text": "Readback: S B, 5 5, 0 1, 2 9, 4 4 — sahi hai?"
+        }
+      ]
+    },
+    {
+      "id": "c02",
+      "mode": "saboot",
+      "rep": 0,
+      "field": "customer_id",
+      "expect": "SB55012944",
+      "speechEndMs": 10644,
+      "firstResponseMs": 5153,
+      "cutOff": true,
+      "replyLatencyMs": 1435,
+      "correct": false,
+      "transcripts": [
+        "S for Seeta",
+        "B for Bombay",
+        "Five",
+        "five",
+        "zero one two nine four four"
+      ],
+      "timeline": [
+        {
+          "t": 1871,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 3673,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 3876,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 4245,
+          "kind": "transcript",
+          "text": "S for Seeta"
+        },
+        {
+          "t": 5572,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 6058,
+          "kind": "transcript",
+          "text": "B for Bombay"
+        },
+        {
+          "t": 6058,
+          "kind": "respond",
+          "text": "complete"
+        },
+        {
+          "t": 6343,
+          "kind": "agent_start",
+          "text": "agent answering"
+        },
+        {
+          "t": 6378,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 7175,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 7267,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 7787,
+          "kind": "transcript",
+          "text": "Five"
+        },
+        {
+          "t": 8073,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 8517,
+          "kind": "transcript",
+          "text": "five"
+        },
+        {
+          "t": 8517,
+          "kind": "wait",
+          "text": "number incomplete: 2 of 8 digits"
+        },
+        {
+          "t": 8969,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 12470,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 12979,
+          "kind": "transcript",
+          "text": "zero one two nine four four"
+        },
+        {
+          "t": 12980,
+          "kind": "respond",
+          "text": "complete"
+        },
+        {
+          "t": 13269,
+          "kind": "agent_start",
+          "text": "agent answering"
+        },
+        {
+          "t": 18478,
+          "kind": "agent_text",
+          "text": "Theek hai, ab main aapke diye hue customer ID ko verify kar leta hoon."
+        },
+        {
+          "t": 18478,
+          "kind": "capture",
+          "text": "customer_id: SB55012944"
+        }
+      ]
+    },
+    {
+      "id": "c03",
+      "mode": "base",
+      "rep": 0,
+      "field": "customer_id",
+      "expect": "KL77813390",
+      "speechEndMs": 7182,
+      "firstResponseMs": 8064,
+      "cutOff": false,
+      "replyLatencyMs": 882,
+      "captured": "KL77813390",
+      "correct": true,
+      "transcripts": [
+        "KL77-813390"
+      ],
+      "timeline": [
+        {
+          "t": 1783,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 9094,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 9103,
+          "kind": "agent_start",
+          "text": "model took the turn"
+        },
+        {
+          "t": 9576,
+          "kind": "transcript",
+          "text": "KL77-813390"
+        },
+        {
+          "t": 9915,
+          "kind": "agent_text",
+          "text": "Theek hai, main isko validate karke phir aapko read back karta hoon."
+        },
+        {
+          "t": 9920,
+          "kind": "capture",
+          "text": "customer_id: KL77813390"
+        },
+        {
+          "t": 10182,
+          "kind": "agent_start",
+          "text": "model took the turn"
+        },
+        {
+          "t": 10671,
+          "kind": "agent_text",
+          "text": "Readback: K L, 7 7, 8 1, 3 3, 9 0 — sahi hai?"
+        }
+      ]
+    },
+    {
+      "id": "c03",
+      "mode": "saboot",
+      "rep": 0,
+      "field": "customer_id",
+      "expect": "KL77813390",
+      "speechEndMs": 7182,
+      "firstResponseMs": 3985,
+      "cutOff": true,
+      "replyLatencyMs": 3104,
+      "captured": "KL77813390",
+      "correct": true,
+      "transcripts": [
+        "KL77.",
+        "Eight one double three nine zero."
+      ],
+      "timeline": [
+        {
+          "t": 1872,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 4375,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 4830,
+          "kind": "transcript",
+          "text": "KL77."
+        },
+        {
+          "t": 4830,
+          "kind": "respond",
+          "text": "short complete reply"
+        },
+        {
+          "t": 5094,
+          "kind": "agent_start",
+          "text": "agent answering"
+        },
+        {
+          "t": 5275,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 8875,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 9368,
+          "kind": "transcript",
+          "text": "Eight one double three nine zero."
+        },
+        {
+          "t": 9368,
+          "kind": "wait",
+          "text": "number incomplete: 6 of 8 digits"
+        },
+        {
+          "t": 11126,
+          "kind": "respond",
+          "text": "gave up waiting at 6 of 8 digits; ask for the rest"
+        },
+        {
+          "t": 11395,
+          "kind": "agent_start",
+          "text": "agent answering"
+        },
+        {
+          "t": 12915,
+          "kind": "agent_text",
+          "text": "Thik hai, main is customer ID ko validate karke phir readback bolta hoon."
+        },
+        {
+          "t": 12918,
+          "kind": "capture",
+          "text": "customer_id: KL77813390"
+        },
+        {
+          "t": 13207,
+          "kind": "agent_start",
+          "text": "agent answering"
+        },
+        {
+          "t": 13588,
+          "kind": "agent_text",
+          "text": "Readback: K L, 7781, 3390 — sahi hai?"
+        }
+      ]
+    },
+    {
+      "id": "c04",
+      "mode": "base",
+      "rep": 0,
+      "field": "customer_id",
+      "expect": "HY39100581",
+      "speechEndMs": 10283,
+      "firstResponseMs": 4966,
+      "cutOff": true,
+      "replyLatencyMs": 833,
+      "captured": "HY39100581",
+      "correct": true,
+      "transcripts": [
+        "H for Hyderabad",
+        "Y for Yamuna.",
+        "Three nine one zero."
+      ],
+      "timeline": [
+        {
+          "t": 1692,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 3697,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 3700,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 4044,
+          "kind": "transcript",
+          "text": "H for Hyderabad"
+        },
+        {
+          "t": 6003,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 6013,
+          "kind": "agent_start",
+          "text": "model took the turn"
+        },
+        {
+          "t": 6384,
+          "kind": "transcript",
+          "text": "Y for Yamuna."
+        },
+        {
+          "t": 6459,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 12157,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 12163,
+          "kind": "agent_start",
+          "text": "model took the turn"
+        },
+        {
+          "t": 12606,
+          "kind": "transcript",
+          "text": "Three nine one zero."
+        },
+        {
+          "t": 12720,
+          "kind": "agent_text",
+          "text": "Thik hai, main aapke diye hue customer ID ko note kar leta hoon."
+        },
+        {
+          "t": 13009,
+          "kind": "agent_start",
+          "text": "model took the turn"
+        },
+        {
+          "t": 13577,
+          "kind": "capture",
+          "text": "customer_id: HY39100581"
+        },
+        {
+          "t": 13844,
+          "kind": "agent_start",
+          "text": "model took the turn"
+        },
+        {
+          "t": 14291,
+          "kind": "agent_text",
+          "text": "Readback: H, Y, 3 9 1 0, 0 5 8 1 — sahi hai?"
+        }
+      ]
+    },
+    {
+      "id": "c04",
+      "mode": "saboot",
+      "rep": 0,
+      "field": "customer_id",
+      "expect": "HY39100581",
+      "speechEndMs": 10283,
+      "firstResponseMs": 5279,
+      "cutOff": true,
+      "replyLatencyMs": 1288,
+      "captured": "HY39100581",
+      "correct": true,
+      "transcripts": [
+        "H for Hyderabad.",
+        "Y for Yamuna.",
+        "three nine one zero",
+        "zero five eight one"
+      ],
+      "timeline": [
+        {
+          "t": 1793,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 3702,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 3791,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 4104,
+          "kind": "transcript",
+          "text": "H for Hyderabad."
+        },
+        {
+          "t": 5692,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 6134,
+          "kind": "transcript",
+          "text": "Y for Yamuna."
+        },
+        {
+          "t": 6135,
+          "kind": "respond",
+          "text": "complete"
+        },
+        {
+          "t": 6404,
+          "kind": "agent_start",
+          "text": "agent answering"
+        },
+        {
+          "t": 6491,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 8694,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 9109,
+          "kind": "transcript",
+          "text": "three nine one zero"
+        },
+        {
+          "t": 9109,
+          "kind": "wait",
+          "text": "number incomplete: 4 of 8 digits"
+        },
+        {
+          "t": 9491,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 12000,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 12428,
+          "kind": "transcript",
+          "text": "zero five eight one"
+        },
+        {
+          "t": 12428,
+          "kind": "respond",
+          "text": "complete"
+        },
+        {
+          "t": 12696,
+          "kind": "agent_start",
+          "text": "agent answering"
+        },
+        {
+          "t": 15012,
+          "kind": "capture",
+          "text": "customer_id: HY39100581"
+        },
+        {
+          "t": 15293,
+          "kind": "agent_start",
+          "text": "agent answering"
+        },
+        {
+          "t": 15894,
+          "kind": "agent_text",
+          "text": "Readback: H Y, 3 9 1 0, 0 5 8 1 — sahi hai?"
+        }
+      ]
+    },
+    {
+      "id": "c05",
+      "mode": "base",
+      "rep": 0,
+      "field": "customer_id",
+      "expect": "TS44661234",
+      "speechEndMs": 9344,
+      "firstResponseMs": 9266,
+      "cutOff": false,
+      "replyLatencyMs": -78,
+      "captured": "TS44661234",
+      "correct": true,
+      "transcripts": [
+        "IDhey TS446123",
+        "Four."
+      ],
+      "timeline": [
+        {
+          "t": 1889,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 10464,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 10473,
+          "kind": "agent_start",
+          "text": "model took the turn"
+        },
+        {
+          "t": 10500,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 10876,
+          "kind": "transcript",
+          "text": "IDhey TS446123"
+        },
+        {
+          "t": 13798,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 13803,
+          "kind": "agent_start",
+          "text": "model took the turn"
+        },
+        {
+          "t": 14224,
+          "kind": "transcript",
+          "text": "Four."
+        },
+        {
+          "t": 17087,
+          "kind": "agent_text",
+          "text": "Theek hai, main is ID ko note kar raha hoon, phir aapke saath readback confirm karta hoon."
+        },
+        {
+          "t": 17091,
+          "kind": "capture",
+          "text": "customer_id: TS44661234"
+        }
+      ]
+    },
+    {
+      "id": "c05",
+      "mode": "saboot",
+      "rep": 0,
+      "field": "customer_id",
+      "expect": "TS44661234",
+      "speechEndMs": 9344,
+      "firstResponseMs": 3647,
+      "cutOff": true,
+      "replyLatencyMs": 1210,
+      "correct": false,
+      "transcripts": [
+        "ID है TS.",
+        "double four double six.",
+        "One two three",
+        "Four"
+      ],
+      "timeline": [
+        {
+          "t": 1755,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 4160,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 4481,
+          "kind": "transcript",
+          "text": "ID है TS."
+        },
+        {
+          "t": 4481,
+          "kind": "respond",
+          "text": "complete"
+        },
+        {
+          "t": 4561,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 4745,
+          "kind": "agent_start",
+          "text": "agent answering"
+        },
+        {
+          "t": 6242,
+          "kind": "capture",
+          "text": "customer_id: ✗ the two letters at the start weren't clear"
+        },
+        {
+          "t": 6535,
+          "kind": "agent_start",
+          "text": "agent answering"
+        },
+        {
+          "t": 7130,
+          "kind": "agent_text",
+          "text": "Shuru ke do letters clear nahi hue, please unhe clearly repeat karein—jaise “T for Tiger, S for Ship.”"
+        },
+        {
+          "t": 7196,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 7516,
+          "kind": "transcript",
+          "text": "double four double six."
+        },
+        {
+          "t": 7516,
+          "kind": "wait",
+          "text": "number incomplete: 4 of 8 digits"
+        },
+        {
+          "t": 8059,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 10160,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 10369,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 10510,
+          "kind": "transcript",
+          "text": "One two three"
+        },
+        {
+          "t": 11057,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 11391,
+          "kind": "transcript",
+          "text": "Four"
+        },
+        {
+          "t": 11391,
+          "kind": "respond",
+          "text": "complete"
+        },
+        {
+          "t": 11652,
+          "kind": "agent_start",
+          "text": "agent answering"
+        },
+        {
+          "t": 12928,
+          "kind": "agent_text",
+          "text": "Okay, let’s get this sorted step by step. I’ll ask for the right part again so we can log it cleanly."
+        },
+        {
+          "t": 13208,
+          "kind": "agent_start",
+          "text": "agent answering"
+        },
+        {
+          "t": 13878,
+          "kind": "agent_text",
+          "text": "Customer ID mein pehle do letters chahiye, unhe clearly batayein please—phir eight digits. Abhi numbers sun rahe hain, letters missing hain."
+        }
+      ]
+    },
+    {
+      "id": "c06",
+      "mode": "base",
+      "rep": 0,
+      "field": "customer_id",
+      "expect": "HY44221177",
+      "speechEndMs": 8066,
+      "firstResponseMs": 2361,
+      "cutOff": true,
+      "replyLatencyMs": 799,
+      "captured": "1177",
+      "correct": false,
+      "transcripts": [
+        "H-Y",
+        "چار چار دو دو",
+        "ایک ایک سات سات"
+      ],
+      "timeline": [
+        {
+          "t": 2059,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 3731,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 3738,
+          "kind": "agent_start",
+          "text": "model took the turn"
+        },
+        {
+          "t": 4171,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 4216,
+          "kind": "transcript",
+          "text": "H-Y"
+        },
+        {
+          "t": 6577,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 6588,
+          "kind": "agent_start",
+          "text": "model took the turn"
+        },
+        {
+          "t": 6983,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 6994,
+          "kind": "agent_text",
+          "text": "Thik hai, main is detail ko note karke verify karta hoon."
+        },
+        {
+          "t": 7069,
+          "kind": "transcript",
+          "text": "چار چار دو دو"
+        },
+        {
+          "t": 10234,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 10242,
+          "kind": "agent_start",
+          "text": "model took the turn"
+        },
+        {
+          "t": 10766,
+          "kind": "transcript",
+          "text": "ایک ایک سات سات"
+        },
+        {
+          "t": 14103,
+          "kind": "capture",
+          "text": "customer_id: 1177"
+        },
+        {
+          "t": 14415,
+          "kind": "agent_start",
+          "text": "model took the turn"
+        }
+      ]
+    },
+    {
+      "id": "c06",
+      "mode": "saboot",
+      "rep": 0,
+      "field": "customer_id",
+      "expect": "HY44221177",
+      "speechEndMs": 8066,
+      "firstResponseMs": 2779,
+      "cutOff": true,
+      "replyLatencyMs": 3091,
+      "correct": false,
+      "transcripts": [
+        "HY.",
+        "चार चार दो दो।",
+        "एक एक सात सात."
+      ],
+      "timeline": [
+        {
+          "t": 1758,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 3158,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 3622,
+          "kind": "transcript",
+          "text": "HY."
+        },
+        {
+          "t": 3622,
+          "kind": "respond",
+          "text": "short complete reply"
+        },
+        {
+          "t": 3854,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 3879,
+          "kind": "agent_start",
+          "text": "agent answering"
+        },
+        {
+          "t": 5119,
+          "kind": "capture",
+          "text": "customer_id: ✗ the two letters at the start weren't clear"
+        },
+        {
+          "t": 5434,
+          "kind": "agent_start",
+          "text": "agent answering"
+        },
+        {
+          "t": 5755,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 5995,
+          "kind": "agent_text",
+          "text": "Sorry, the two letters at the start weren’t clear. Please repeat the customer ID letters clearly—like “H for Hyderabad, Y for Yellow”—and then we’ll add the 8 digits."
+        },
+        {
+          "t": 6219,
+          "kind": "transcript",
+          "text": "चार चार दो दो।"
+        },
+        {
+          "t": 6219,
+          "kind": "wait",
+          "text": "number incomplete: 3 of 8 digits"
+        },
+        {
+          "t": 6648,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 9753,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 10183,
+          "kind": "transcript",
+          "text": "एक एक सात सात."
+        },
+        {
+          "t": 10183,
+          "kind": "wait",
+          "text": "number incomplete: 7 of 8 digits"
+        },
+        {
+          "t": 12003,
+          "kind": "respond",
+          "text": "gave up waiting at 7 of 8 digits; ask for the rest"
+        },
+        {
+          "t": 12257,
+          "kind": "agent_start",
+          "text": "agent answering"
+        },
+        {
+          "t": 15241,
+          "kind": "agent_text",
+          "text": "Okay, let me capture that carefully and then I’ll read it back for confirmation."
+        },
+        {
+          "t": 15532,
+          "kind": "agent_start",
+          "text": "agent answering"
+        }
+      ]
+    },
+    {
+      "id": "p02",
+      "mode": "saboot",
+      "rep": 0,
+      "field": "pincode",
+      "expect": "500032",
+      "speechEndMs": 6640,
+      "firstResponseMs": 7826,
+      "cutOff": false,
+      "replyLatencyMs": 1186,
+      "captured": "500032",
+      "correct": true,
+      "transcripts": [
+        "गाचीबोवली.",
+        "five double zero.",
+        "zero",
+        "three two"
+      ],
+      "timeline": [
+        {
+          "t": 1930,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 3139,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 3227,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 3503,
+          "kind": "transcript",
+          "text": "गाचीबोवली."
+        },
+        {
+          "t": 4937,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 5246,
+          "kind": "transcript",
+          "text": "five double zero."
+        },
+        {
+          "t": 5247,
+          "kind": "wait",
+          "text": "number incomplete: 3 of 6 digits"
+        },
+        {
+          "t": 5827,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 6830,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 6925,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 7174,
+          "kind": "transcript",
+          "text": "zero"
+        },
+        {
+          "t": 8329,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 8650,
+          "kind": "transcript",
+          "text": "three two"
+        },
+        {
+          "t": 8650,
+          "kind": "respond",
+          "text": "complete"
+        },
+        {
+          "t": 8904,
+          "kind": "agent_start",
+          "text": "agent answering"
+        },
+        {
+          "t": 11520,
+          "kind": "agent_text",
+          "text": "Theek hai, main is pincode ko note karke confirm karta hoon."
+        },
+        {
+          "t": 11524,
+          "kind": "capture",
+          "text": "pincode: 500032"
+        },
+        {
+          "t": 11815,
+          "kind": "agent_start",
+          "text": "agent answering"
+        },
+        {
+          "t": 12157,
+          "kind": "agent_text",
+          "text": "Readback: 5 0 0, 0 3 2 — sahi hai?"
+        }
+      ]
+    },
+    {
+      "id": "p02",
+      "mode": "base",
+      "rep": 0,
+      "field": "pincode",
+      "expect": "500032",
+      "speechEndMs": 6640,
+      "firstResponseMs": 4202,
+      "cutOff": true,
+      "replyLatencyMs": 1362,
+      "captured": "032",
+      "correct": false,
+      "transcripts": [
+        "gachi boli, five double zero",
+        "Zero three two"
+      ],
+      "timeline": [
+        {
+          "t": 2108,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 5418,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 5422,
+          "kind": "agent_start",
+          "text": "model took the turn"
+        },
+        {
+          "t": 5993,
+          "kind": "transcript",
+          "text": "gachi boli, five double zero"
+        },
+        {
+          "t": 6023,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 6052,
+          "kind": "agent_text",
+          "text": "Thik hai, main is detail ko note karke confirm karta hoon."
+        },
+        {
+          "t": 9215,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 9222,
+          "kind": "agent_start",
+          "text": "model took the turn"
+        },
+        {
+          "t": 9818,
+          "kind": "capture",
+          "text": "pincode: 032"
+        },
+        {
+          "t": 9839,
+          "kind": "transcript",
+          "text": "Zero three two"
+        },
+        {
+          "t": 10178,
+          "kind": "agent_start",
+          "text": "model took the turn"
+        },
+        {
+          "t": 11902,
+          "kind": "agent_text",
+          "text": "Pincode readback: zero, three, two — sahi hai?"
+        }
+      ]
+    },
+    {
+      "id": "p01",
+      "mode": "base",
+      "rep": 0,
+      "field": "pincode",
+      "expect": "500072",
+      "speechEndMs": 8594,
+      "firstResponseMs": 6610,
+      "cutOff": true,
+      "replyLatencyMs": 897,
+      "correct": false,
+      "transcripts": [
+        "मैं कुकटपल्ली में रहता हूँ। पिन कोड 50।",
+        "0072"
+      ],
+      "timeline": [
+        {
+          "t": 1865,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 7818,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 7823,
+          "kind": "agent_start",
+          "text": "model took the turn"
+        },
+        {
+          "t": 8370,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 8380,
+          "kind": "transcript",
+          "text": "मैं कुकटपल्ली में रहता हूँ। पिन कोड 50।"
+        },
+        {
+          "t": 8435,
+          "kind": "agent_text",
+          "text": "Thik hai, main pehle locality note karta hoon, phir p"
+        },
+        {
+          "t": 10698,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 10704,
+          "kind": "agent_start",
+          "text": "model took the turn"
+        },
+        {
+          "t": 11138,
+          "kind": "transcript",
+          "text": "0072"
+        }
+      ]
+    },
+    {
+      "id": "p01",
+      "mode": "saboot",
+      "rep": 0,
+      "field": "pincode",
+      "expect": "500072",
+      "speechEndMs": 8594,
+      "firstResponseMs": 9902,
+      "cutOff": false,
+      "replyLatencyMs": 1308,
+      "captured": "500072",
+      "correct": true,
+      "transcripts": [
+        "मैं कुकटपल्ली में रहता हूँ.",
+        "Pin code five zero.",
+        "zero zero seven two."
+      ],
+      "timeline": [
+        {
+          "t": 1913,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 5023,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 5208,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 5485,
+          "kind": "transcript",
+          "text": "मैं कुकटपल्ली में रहता हूँ."
+        },
+        {
+          "t": 7413,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 7816,
+          "kind": "transcript",
+          "text": "Pin code five zero."
+        },
+        {
+          "t": 7816,
+          "kind": "wait",
+          "text": "number incomplete: 2 of 6 digits"
+        },
+        {
+          "t": 8411,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 10410,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 10842,
+          "kind": "transcript",
+          "text": "zero zero seven two."
+        },
+        {
+          "t": 10842,
+          "kind": "respond",
+          "text": "complete"
+        },
+        {
+          "t": 11130,
+          "kind": "agent_start",
+          "text": "agent answering"
+        },
+        {
+          "t": 12534,
+          "kind": "agent_text",
+          "text": "Okay, got your locality—let me register that first, then we’ll confirm it."
+        },
+        {
+          "t": 12860,
+          "kind": "agent_start",
+          "text": "agent answering"
+        },
+        {
+          "t": 13424,
+          "kind": "capture",
+          "text": "locality: Kukatpally"
+        },
+        {
+          "t": 13762,
+          "kind": "agent_start",
+          "text": "agent answering"
+        },
+        {
+          "t": 14472,
+          "kind": "agent_start",
+          "text": "agent answering"
+        },
+        {
+          "t": 15096,
+          "kind": "capture",
+          "text": "pincode: 500072"
+        },
+        {
+          "t": 15410,
+          "kind": "agent_start",
+          "text": "agent answering"
+        },
+        {
+          "t": 15950,
+          "kind": "agent_text",
+          "text": "Locality readback: Kukatpally, Hyderabad—sahi hai?\n\nPincode readback: 500 072—sahi hai?"
+        }
+      ]
+    },
+    {
+      "id": "p03",
+      "mode": "base",
+      "rep": 0,
+      "field": "pincode",
+      "expect": "500081",
+      "speechEndMs": 8258,
+      "firstResponseMs": 4399,
+      "cutOff": true,
+      "replyLatencyMs": 830,
+      "captured": "500081",
+      "correct": true,
+      "transcripts": [
+        "माझा पोर्साईड.",
+        "پنکود ہے۔",
+        "Five zero zero.",
+        "081"
+      ],
+      "timeline": [
+        {
+          "t": 1867,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 3873,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 3874,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 4294,
+          "kind": "transcript",
+          "text": "माझा पोर्साईड."
+        },
+        {
+          "t": 5499,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 5505,
+          "kind": "agent_start",
+          "text": "model took the turn"
+        },
+        {
+          "t": 5811,
+          "kind": "transcript",
+          "text": "پنکود ہے۔"
+        },
+        {
+          "t": 6072,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 6105,
+          "kind": "agent_text",
+          "text": "Thik hai, main pehle locality aur pincode ko note karke verify karta"
+        },
+        {
+          "t": 8175,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 8178,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 8496,
+          "kind": "transcript",
+          "text": "Five zero zero."
+        },
+        {
+          "t": 10186,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 10194,
+          "kind": "agent_start",
+          "text": "model took the turn"
+        },
+        {
+          "t": 10529,
+          "kind": "transcript",
+          "text": "081"
+        },
+        {
+          "t": 12124,
+          "kind": "capture",
+          "text": "locality: Madhapur side"
+        },
+        {
+          "t": 12440,
+          "kind": "agent_start",
+          "text": "model took the turn"
+        },
+        {
+          "t": 12969,
+          "kind": "capture",
+          "text": "pincode: 500081"
+        },
+        {
+          "t": 13285,
+          "kind": "agent_start",
+          "text": "model took the turn"
+        }
+      ]
+    },
+    {
+      "id": "p03",
+      "mode": "saboot",
+      "rep": 0,
+      "field": "pincode",
+      "expect": "500081",
+      "speechEndMs": 8258,
+      "firstResponseMs": 4891,
+      "cutOff": true,
+      "replyLatencyMs": 1297,
+      "correct": false,
+      "transcripts": [
+        "Maadha pour site.",
+        "pin code है.",
+        "Five zero zero.",
+        "081."
+      ],
+      "timeline": [
+        {
+          "t": 1983,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 3888,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 3985,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 4339,
+          "kind": "transcript",
+          "text": "Maadha pour site."
+        },
+        {
+          "t": 5489,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 5806,
+          "kind": "transcript",
+          "text": "pin code है."
+        },
+        {
+          "t": 5806,
+          "kind": "respond",
+          "text": "complete"
+        },
+        {
+          "t": 6091,
+          "kind": "agent_start",
+          "text": "agent answering"
+        },
+        {
+          "t": 6185,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 8189,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 8288,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 8550,
+          "kind": "transcript",
+          "text": "Five zero zero."
+        },
+        {
+          "t": 10091,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 10466,
+          "kind": "transcript",
+          "text": "081."
+        },
+        {
+          "t": 10466,
+          "kind": "respond",
+          "text": "complete"
+        },
+        {
+          "t": 10755,
+          "kind": "agent_start",
+          "text": "agent answering"
+        },
+        {
+          "t": 13501,
+          "kind": "capture",
+          "text": "locality: Maadha pour site. pin code है. Five zero zero. 081."
+        },
+        {
+          "t": 13853,
+          "kind": "agent_start",
+          "text": "agent answering"
+        },
+        {
+          "t": 15837,
+          "kind": "agent_text",
+          "text": "Readback: Madhapur side, sahi hai?"
+        }
+      ]
+    },
+    {
+      "id": "p04",
+      "mode": "base",
+      "rep": 0,
+      "field": "pincode",
+      "expect": "500016",
+      "speechEndMs": 6161,
+      "firstResponseMs": 4523,
+      "cutOff": true,
+      "replyLatencyMs": 1632,
+      "correct": false,
+      "transcripts": [
+        "Amirpet, Pin code 50000.",
+        "1 6"
+      ],
+      "timeline": [
+        {
+          "t": 1932,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 5754,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 5762,
+          "kind": "agent_start",
+          "text": "model took the turn"
+        },
+        {
+          "t": 6272,
+          "kind": "transcript",
+          "text": "Amirpet, Pin code 50000."
+        },
+        {
+          "t": 6634,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 6667,
+          "kind": "agent_text",
+          "text": "Okay, let me capture that carefully and then we’ll read it back for confirmation."
+        },
+        {
+          "t": 9017,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 9032,
+          "kind": "agent_start",
+          "text": "model took the turn"
+        },
+        {
+          "t": 9575,
+          "kind": "transcript",
+          "text": "1 6"
+        },
+        {
+          "t": 11664,
+          "kind": "agent_start",
+          "text": "model took the turn"
+        },
+        {
+          "t": 12296,
+          "kind": "capture",
+          "text": "locality: Amirpet"
+        },
+        {
+          "t": 12629,
+          "kind": "agent_start",
+          "text": "model took the turn"
+        },
+        {
+          "t": 13065,
+          "kind": "agent_text",
+          "text": "Locality readback: Amirpet, sahi hai?"
+        }
+      ]
+    },
+    {
+      "id": "p04",
+      "mode": "saboot",
+      "rep": 0,
+      "field": "pincode",
+      "expect": "500016",
+      "speechEndMs": 6161,
+      "firstResponseMs": 7254,
+      "cutOff": false,
+      "replyLatencyMs": 1093,
+      "correct": false,
+      "transcripts": [
+        "Ameerpet, pin code five zero zero zero.",
+        "1 6."
+      ],
+      "timeline": [
+        {
+          "t": 1880,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 5384,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 5810,
+          "kind": "transcript",
+          "text": "Ameerpet, pin code five zero zero zero."
+        },
+        {
+          "t": 5810,
+          "kind": "wait",
+          "text": "number incomplete: 4 of 6 digits"
+        },
+        {
+          "t": 6471,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 7870,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 8180,
+          "kind": "transcript",
+          "text": "1 6."
+        },
+        {
+          "t": 8180,
+          "kind": "respond",
+          "text": "complete"
+        },
+        {
+          "t": 8459,
+          "kind": "agent_start",
+          "text": "agent answering"
+        },
+        {
+          "t": 11972,
+          "kind": "agent_text",
+          "text": "Theek hai, main yeh detail note kar leta hoon, phir aapko readback karke confirm karunga."
+        },
+        {
+          "t": 11977,
+          "kind": "capture",
+          "text": "locality: Ameerpet"
+        },
+        {
+          "t": 12289,
+          "kind": "agent_start",
+          "text": "agent answering"
+        },
+        {
+          "t": 12648,
+          "kind": "agent_text",
+          "text": "Aapne locality “Ameerpet, Hyderabad” bola, sahi hai?"
+        }
+      ]
+    },
+    {
+      "id": "p05",
+      "mode": "base",
+      "rep": 0,
+      "field": "pincode",
+      "expect": "560034",
+      "speechEndMs": 6152,
+      "firstResponseMs": 7311,
+      "cutOff": false,
+      "replyLatencyMs": 1159,
+      "correct": false,
+      "transcripts": [
+        "Koramangala - 560034"
+      ],
+      "timeline": [
+        {
+          "t": 1903,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 8423,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 8443,
+          "kind": "agent_start",
+          "text": "model took the turn"
+        },
+        {
+          "t": 8785,
+          "kind": "transcript",
+          "text": "Koramangala - 560034"
+        },
+        {
+          "t": 11247,
+          "kind": "agent_text",
+          "text": "Thik hai, main iss detail ko note karke confirm karta hoon."
+        },
+        {
+          "t": 11253,
+          "kind": "capture",
+          "text": "locality: Koramangala"
+        },
+        {
+          "t": 11549,
+          "kind": "agent_start",
+          "text": "model took the turn"
+        },
+        {
+          "t": 11975,
+          "kind": "agent_text",
+          "text": "Readback: Koramangala — sahi hai?"
+        }
+      ]
+    },
+    {
+      "id": "p05",
+      "mode": "saboot",
+      "rep": 0,
+      "field": "pincode",
+      "expect": "560034",
+      "speechEndMs": 6152,
+      "firstResponseMs": 7392,
+      "cutOff": false,
+      "replyLatencyMs": 1240,
+      "correct": false,
+      "transcripts": [
+        "Koramangala.",
+        "560.",
+        "zero three four"
+      ],
+      "timeline": [
+        {
+          "t": 1902,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 3302,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 3497,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 3617,
+          "kind": "transcript",
+          "text": "Koramangala."
+        },
+        {
+          "t": 5099,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 5437,
+          "kind": "transcript",
+          "text": "560."
+        },
+        {
+          "t": 5437,
+          "kind": "wait",
+          "text": "number incomplete: 3 of 6 digits"
+        },
+        {
+          "t": 5996,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 7903,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 8244,
+          "kind": "transcript",
+          "text": "zero three four"
+        },
+        {
+          "t": 8244,
+          "kind": "respond",
+          "text": "complete"
+        },
+        {
+          "t": 8523,
+          "kind": "agent_start",
+          "text": "agent answering"
+        },
+        {
+          "t": 13387,
+          "kind": "agent_text",
+          "text": "Thik hai, main is detail ko note karke aapke saath readback confirm karta hoon."
+        },
+        {
+          "t": 13391,
+          "kind": "capture",
+          "text": "locality: Koramangala"
+        },
+        {
+          "t": 13852,
+          "kind": "agent_start",
+          "text": "agent answering"
+        }
+      ]
+    },
+    {
+      "id": "p06",
+      "mode": "saboot",
+      "rep": 0,
+      "field": "pincode",
+      "expect": "500039",
+      "speechEndMs": 5834,
+      "firstResponseMs": 7206,
+      "cutOff": false,
+      "replyLatencyMs": 1372,
+      "correct": false,
+      "transcripts": [
+        "Utpal five zero zero.",
+        "zero three nine."
+      ],
+      "timeline": [
+        {
+          "t": 1702,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 4413,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 4859,
+          "kind": "transcript",
+          "text": "Utpal five zero zero."
+        },
+        {
+          "t": 4859,
+          "kind": "wait",
+          "text": "number incomplete: 3 of 6 digits"
+        },
+        {
+          "t": 5195,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 7497,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 8002,
+          "kind": "transcript",
+          "text": "zero three nine."
+        },
+        {
+          "t": 8003,
+          "kind": "respond",
+          "text": "complete"
+        },
+        {
+          "t": 8259,
+          "kind": "agent_start",
+          "text": "agent answering"
+        },
+        {
+          "t": 12834,
+          "kind": "agent_text",
+          "text": "```commentary to=functions.record_detail  რესjson  սխাল\n{\"field\":\"locality\",\"spoken\":\"Uppal, 500 039\",\"value\":\"Uppal, 500039\"}  주세요  փորձ\n```"
+        },
+        {
+          "t": 12839,
+          "kind": "capture",
+          "text": "locality: Utpal five zero zero. zero three nine."
+        },
+        {
+          "t": 13130,
+          "kind": "agent_start",
+          "text": "agent answering"
+        }
+      ]
+    },
+    {
+      "id": "p06",
+      "mode": "base",
+      "rep": 0,
+      "field": "pincode",
+      "expect": "500039",
+      "speechEndMs": 5834,
+      "firstResponseMs": 6900,
+      "cutOff": false,
+      "replyLatencyMs": 1066,
+      "captured": "500039",
+      "correct": true,
+      "transcripts": [
+        "Utal 500 039"
+      ],
+      "timeline": [
+        {
+          "t": 1911,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 8120,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 8121,
+          "kind": "agent_start",
+          "text": "model took the turn"
+        },
+        {
+          "t": 8529,
+          "kind": "transcript",
+          "text": "Utal 500 039"
+        },
+        {
+          "t": 9529,
+          "kind": "agent_text",
+          "text": "Thik hai, main ye details note kar raha hoon."
+        },
+        {
+          "t": 9534,
+          "kind": "capture",
+          "text": "locality: Uppal"
+        },
+        {
+          "t": 9856,
+          "kind": "agent_start",
+          "text": "model took the turn"
+        },
+        {
+          "t": 10218,
+          "kind": "capture",
+          "text": "pincode: 500039"
+        },
+        {
+          "t": 10558,
+          "kind": "agent_start",
+          "text": "model took the turn"
+        },
+        {
+          "t": 12767,
+          "kind": "agent_text",
+          "text": "Locality: Uppal, sahi hai?  \nPincode: 5 0 0 0 3 9, sahi hai?"
+        }
+      ]
+    },
+    {
+      "id": "n01",
+      "mode": "base",
+      "rep": 0,
+      "field": "name",
+      "expect": "Venkata Ramana Reddy",
+      "speechEndMs": 3156,
+      "firstResponseMs": 4096,
+      "cutOff": false,
+      "replyLatencyMs": 940,
+      "captured": "Venkata Ramana Reddy",
+      "correct": true,
+      "transcripts": [
+        "मेरा नाम वेंकटा रामना रेड्डी है।"
+      ],
+      "timeline": [
+        {
+          "t": 1869,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 5274,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 5280,
+          "kind": "agent_start",
+          "text": "model took the turn"
+        },
+        {
+          "t": 5922,
+          "kind": "transcript",
+          "text": "मेरा नाम वेंकटा रामना रेड्डी है।"
+        },
+        {
+          "t": 6941,
+          "kind": "capture",
+          "text": "name: Venkata Ramana Reddy"
+        },
+        {
+          "t": 7257,
+          "kind": "agent_start",
+          "text": "model took the turn"
+        },
+        {
+          "t": 9132,
+          "kind": "agent_text",
+          "text": "Aapka naam “Venkata Ramana Reddy” — sahi hai?"
+        }
+      ]
+    },
+    {
+      "id": "n01",
+      "mode": "saboot",
+      "rep": 0,
+      "field": "name",
+      "expect": "Venkata Ramana Reddy",
+      "speechEndMs": 3156,
+      "firstResponseMs": 4555,
+      "cutOff": false,
+      "replyLatencyMs": 1399,
+      "captured": "व कट र मन र ड ड .",
+      "correct": false,
+      "transcripts": [
+        "मेरा नाम वेंकटा रामना रेड्डी है."
+      ],
+      "timeline": [
+        {
+          "t": 1807,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 4906,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 5431,
+          "kind": "transcript",
+          "text": "मेरा नाम वेंकटा रामना रेड्डी है."
+        },
+        {
+          "t": 5431,
+          "kind": "respond",
+          "text": "complete"
+        },
+        {
+          "t": 5696,
+          "kind": "agent_start",
+          "text": "agent answering"
+        },
+        {
+          "t": 6618,
+          "kind": "agent_text",
+          "text": "Thik hai, main is naam ko note karke aap se confirm kara leta hoon."
+        },
+        {
+          "t": 6628,
+          "kind": "capture",
+          "text": "name: व कट र मन र ड ड ."
+        },
+        {
+          "t": 6918,
+          "kind": "agent_start",
+          "text": "agent answering"
+        },
+        {
+          "t": 9079,
+          "kind": "agent_text",
+          "text": "Readback: व कट र मन र ड ड . Sahi hai?"
+        }
+      ]
+    },
+    {
+      "id": "n02",
+      "mode": "base",
+      "rep": 0,
+      "field": "name",
+      "expect": "Sravani Kodali",
+      "speechEndMs": 2369,
+      "firstResponseMs": 3222,
+      "cutOff": false,
+      "replyLatencyMs": 853,
+      "captured": "Sravani Kodali",
+      "correct": true,
+      "transcripts": [
+        "స్రావణి కొడలు."
+      ],
+      "timeline": [
+        {
+          "t": 1924,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 4290,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 4296,
+          "kind": "agent_start",
+          "text": "model took the turn"
+        },
+        {
+          "t": 4699,
+          "kind": "transcript",
+          "text": "స్రావణి కొడలు."
+        },
+        {
+          "t": 5756,
+          "kind": "agent_text",
+          "text": "Ek moment, main aapke naam ko note kar raha hoon."
+        },
+        {
+          "t": 6035,
+          "kind": "agent_start",
+          "text": "model took the turn"
+        },
+        {
+          "t": 6577,
+          "kind": "capture",
+          "text": "name: Sravani Kodali"
+        },
+        {
+          "t": 6847,
+          "kind": "agent_start",
+          "text": "model took the turn"
+        },
+        {
+          "t": 7145,
+          "kind": "agent_text",
+          "text": "Naam readback: Sravani Kodali, sahi hai?"
+        }
+      ]
+    },
+    {
+      "id": "n02",
+      "mode": "saboot",
+      "rep": 0,
+      "field": "name",
+      "expect": "Sravani Kodali",
+      "speechEndMs": 2369,
+      "firstResponseMs": 3663,
+      "cutOff": false,
+      "replyLatencyMs": 1294,
+      "captured": "Sravani Kodalu.",
+      "correct": false,
+      "transcripts": [
+        "Sravani kodalu."
+      ],
+      "timeline": [
+        {
+          "t": 1930,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 4033,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 4496,
+          "kind": "transcript",
+          "text": "Sravani kodalu."
+        },
+        {
+          "t": 4497,
+          "kind": "respond",
+          "text": "short complete reply"
+        },
+        {
+          "t": 4749,
+          "kind": "agent_start",
+          "text": "agent answering"
+        },
+        {
+          "t": 6740,
+          "kind": "capture",
+          "text": "name: Sravani Kodalu."
+        },
+        {
+          "t": 7056,
+          "kind": "agent_start",
+          "text": "agent answering"
+        },
+        {
+          "t": 7477,
+          "kind": "agent_text",
+          "text": "Naam readback: Sravani Kodalu. Sahi hai?"
+        }
+      ]
+    },
+    {
+      "id": "n03",
+      "mode": "saboot",
+      "rep": 0,
+      "field": "name",
+      "expect": "Mohammed Irfan",
+      "speechEndMs": 2551,
+      "firstResponseMs": 3873,
+      "cutOff": false,
+      "replyLatencyMs": 1322,
+      "captured": "म हम मद इरफ न.",
+      "correct": false,
+      "transcripts": [
+        "जी, मोहम्मद इरफान."
+      ],
+      "timeline": [
+        {
+          "t": 1889,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 4294,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 4725,
+          "kind": "transcript",
+          "text": "जी, मोहम्मद इरफान."
+        },
+        {
+          "t": 4725,
+          "kind": "respond",
+          "text": "complete"
+        },
+        {
+          "t": 4996,
+          "kind": "agent_start",
+          "text": "agent answering"
+        },
+        {
+          "t": 7354,
+          "kind": "agent_text",
+          "text": "Theek hai, main aapke diye hue naam ko note kar raha hoon."
+        },
+        {
+          "t": 7355,
+          "kind": "capture",
+          "text": "name: म हम मद इरफ न."
+        },
+        {
+          "t": 7654,
+          "kind": "agent_start",
+          "text": "agent answering"
+        },
+        {
+          "t": 9690,
+          "kind": "agent_text",
+          "text": "Aapka naam read back: \"म हम मद इरफ न.\" — sahi hai?"
+        }
+      ]
+    },
+    {
+      "id": "n03",
+      "mode": "base",
+      "rep": 0,
+      "field": "name",
+      "expect": "Mohammed Irfan",
+      "speechEndMs": 2551,
+      "firstResponseMs": 3915,
+      "cutOff": false,
+      "replyLatencyMs": 1364,
+      "captured": "Mohammed Irfan",
+      "correct": true,
+      "transcripts": [
+        "G. Muhammad Irfan"
+      ],
+      "timeline": [
+        {
+          "t": 2006,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 5126,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 5134,
+          "kind": "agent_start",
+          "text": "model took the turn"
+        },
+        {
+          "t": 5504,
+          "kind": "transcript",
+          "text": "G. Muhammad Irfan"
+        },
+        {
+          "t": 6262,
+          "kind": "capture",
+          "text": "name: Mohammed Irfan"
+        },
+        {
+          "t": 6584,
+          "kind": "agent_start",
+          "text": "model took the turn"
+        },
+        {
+          "t": 7152,
+          "kind": "agent_text",
+          "text": "Naam readback: Mohammed Irfan — sahi hai?"
+        }
+      ]
+    },
+    {
+      "id": "n04",
+      "mode": "base",
+      "rep": 0,
+      "field": "name",
+      "expect": "Lakshmi Prasanna Naidu",
+      "speechEndMs": 2610,
+      "firstResponseMs": 3568,
+      "cutOff": false,
+      "replyLatencyMs": 958,
+      "captured": "Lakshmi Prasanna Naidu",
+      "correct": true,
+      "transcripts": [
+        "Lakshmi Prasanna Naidu"
+      ],
+      "timeline": [
+        {
+          "t": 1972,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 4836,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 4839,
+          "kind": "agent_start",
+          "text": "model took the turn"
+        },
+        {
+          "t": 5283,
+          "kind": "transcript",
+          "text": "Lakshmi Prasanna Naidu"
+        },
+        {
+          "t": 5659,
+          "kind": "capture",
+          "text": "name: Lakshmi Prasanna Naidu"
+        },
+        {
+          "t": 5997,
+          "kind": "agent_start",
+          "text": "model took the turn"
+        },
+        {
+          "t": 6507,
+          "kind": "agent_text",
+          "text": "Naam readback: Lakshmi Prasanna Naidu, sahi hai?"
+        }
+      ]
+    },
+    {
+      "id": "n04",
+      "mode": "saboot",
+      "rep": 0,
+      "field": "name",
+      "expect": "Lakshmi Prasanna Naidu",
+      "speechEndMs": 2610,
+      "firstResponseMs": 3936,
+      "cutOff": false,
+      "replyLatencyMs": 1326,
+      "captured": "Lakshmi Prasanna Naidu.",
+      "correct": true,
+      "transcripts": [
+        "Lakshmi Prasanna Naidu."
+      ],
+      "timeline": [
+        {
+          "t": 1995,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 4594,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 4953,
+          "kind": "transcript",
+          "text": "Lakshmi Prasanna Naidu."
+        },
+        {
+          "t": 4953,
+          "kind": "respond",
+          "text": "complete"
+        },
+        {
+          "t": 5242,
+          "kind": "agent_start",
+          "text": "agent answering"
+        },
+        {
+          "t": 7136,
+          "kind": "capture",
+          "text": "name: Lakshmi Prasanna Naidu."
+        },
+        {
+          "t": 7453,
+          "kind": "agent_start",
+          "text": "agent answering"
+        },
+        {
+          "t": 7909,
+          "kind": "agent_text",
+          "text": "Aapka naam “Lakshmi Prasanna Naidu.” sahi hai?"
+        }
+      ]
+    },
+    {
+      "id": "h01",
+      "mode": "base",
+      "rep": 0,
+      "field": null,
+      "speechEndMs": 7063,
+      "firstResponseMs": 7991,
+      "cutOff": false,
+      "replyLatencyMs": 928,
+      "transcripts": [
+        "मेरा इंटरनेट कल रात से बंद है और राउटर पे रेड लाइट आ रही है।"
+      ],
+      "timeline": [
+        {
+          "t": 1923,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 9181,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 9226,
+          "kind": "agent_start",
+          "text": "model took the turn"
+        },
+        {
+          "t": 9785,
+          "kind": "transcript",
+          "text": "मेरा इंटरनेट कल रात से बंद है और राउटर पे रेड लाइट आ रही है।"
+        },
+        {
+          "t": 10250,
+          "kind": "agent_start",
+          "text": "model took the turn"
+        },
+        {
+          "t": 10642,
+          "kind": "agent_text",
+          "text": "Samajh gaya, red light aa rahi hai. Pehle aapka registered mobile number bataiye, please."
+        }
+      ]
+    },
+    {
+      "id": "h01",
+      "mode": "saboot",
+      "rep": 0,
+      "field": null,
+      "speechEndMs": 7063,
+      "firstResponseMs": 8457,
+      "cutOff": false,
+      "replyLatencyMs": 1394,
+      "transcripts": [
+        "Mera internet kal raat se band hai aur",
+        "Router pe red light aa rahi hai."
+      ],
+      "timeline": [
+        {
+          "t": 1971,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 5468,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 6002,
+          "kind": "transcript",
+          "text": "Mera internet kal raat se band hai aur"
+        },
+        {
+          "t": 6002,
+          "kind": "wait",
+          "text": "trailing hesitation word"
+        },
+        {
+          "t": 6463,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 8962,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 9420,
+          "kind": "transcript",
+          "text": "Router pe red light aa rahi hai."
+        },
+        {
+          "t": 9420,
+          "kind": "respond",
+          "text": "complete"
+        },
+        {
+          "t": 9725,
+          "kind": "agent_start",
+          "text": "agent answering"
+        },
+        {
+          "t": 10837,
+          "kind": "agent_start",
+          "text": "agent answering"
+        },
+        {
+          "t": 11396,
+          "kind": "agent_text",
+          "text": "Samjha, red light aa rahi hai. Pehle aapka registered mobile number bata dijiye, please."
+        }
+      ]
+    },
+    {
+      "id": "h02",
+      "mode": "base",
+      "rep": 0,
+      "field": null,
+      "speechEndMs": 7830,
+      "firstResponseMs": 4511,
+      "cutOff": true,
+      "replyLatencyMs": 954,
+      "transcripts": [
+        "پھر تو میں نے دے کر دیا تھا۔",
+        "फिर भी कनेक्शन सस्पेंड दिखा रहा है."
+      ],
+      "timeline": [
+        {
+          "t": 2083,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 5782,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 5790,
+          "kind": "agent_start",
+          "text": "model took the turn"
+        },
+        {
+          "t": 6237,
+          "kind": "transcript",
+          "text": "پھر تو میں نے دے کر دیا تھا۔"
+        },
+        {
+          "t": 6587,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 10052,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 10063,
+          "kind": "agent_start",
+          "text": "model took the turn"
+        },
+        {
+          "t": 10518,
+          "kind": "transcript",
+          "text": "फिर भी कनेक्शन सस्पेंड दिखा रहा है."
+        },
+        {
+          "t": 10789,
+          "kind": "agent_start",
+          "text": "model took the turn"
+        },
+        {
+          "t": 11430,
+          "kind": "agent_text",
+          "text": "Samajh gaya, bill paid hai but connection suspended dikh raha hai. Please apna registered mobile number bataiye, 10 digits."
+        }
+      ]
+    },
+    {
+      "id": "h02",
+      "mode": "saboot",
+      "rep": 0,
+      "field": null,
+      "speechEndMs": 7830,
+      "firstResponseMs": 4901,
+      "cutOff": true,
+      "replyLatencyMs": 1446,
+      "transcripts": [
+        "Bill तो मैंने पे कर दिया था, मतलब",
+        "फिर भी connection suspend दिखा रहा है."
+      ],
+      "timeline": [
+        {
+          "t": 1987,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 5290,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 5768,
+          "kind": "transcript",
+          "text": "Bill तो मैंने पे कर दिया था, मतलब"
+        },
+        {
+          "t": 5769,
+          "kind": "respond",
+          "text": "complete"
+        },
+        {
+          "t": 6114,
+          "kind": "agent_start",
+          "text": "agent answering"
+        },
+        {
+          "t": 6485,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 9688,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 10216,
+          "kind": "transcript",
+          "text": "फिर भी connection suspend दिखा रहा है."
+        },
+        {
+          "t": 10216,
+          "kind": "respond",
+          "text": "complete"
+        },
+        {
+          "t": 10489,
+          "kind": "agent_start",
+          "text": "agent answering"
+        },
+        {
+          "t": 11076,
+          "kind": "agent_start",
+          "text": "agent answering"
+        },
+        {
+          "t": 11434,
+          "kind": "agent_text",
+          "text": "Samajh gaya, suspension issue hai. Pehle aapka registered mobile number bata dijiye, please."
+        }
+      ]
+    },
+    {
+      "id": "h03",
+      "mode": "base",
+      "rep": 0,
+      "field": null,
+      "speechEndMs": 6113,
+      "firstResponseMs": 7135,
+      "cutOff": false,
+      "replyLatencyMs": 1022,
+      "transcripts": [
+        "वो अक्चुअली, दो दिन से स्पीड बहुत स्लो है।"
+      ],
+      "timeline": [
+        {
+          "t": 1902,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 8345,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 8353,
+          "kind": "agent_start",
+          "text": "model took the turn"
+        },
+        {
+          "t": 9041,
+          "kind": "transcript",
+          "text": "वो अक्चुअली, दो दिन से स्पीड बहुत स्लो है।"
+        },
+        {
+          "t": 9606,
+          "kind": "agent_start",
+          "text": "model took the turn"
+        },
+        {
+          "t": 10098,
+          "kind": "agent_text",
+          "text": "Samjha, slow speed issue hai. Pehle aapka registered mobile number bata dijiye, please."
+        }
+      ]
+    },
+    {
+      "id": "h03",
+      "mode": "saboot",
+      "rep": 0,
+      "field": null,
+      "speechEndMs": 6113,
+      "firstResponseMs": 7408,
+      "cutOff": false,
+      "replyLatencyMs": 1295,
+      "transcripts": [
+        "Woh actually",
+        "दो दिन से",
+        "Speed bahut slow hai."
+      ],
+      "timeline": [
+        {
+          "t": 1797,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 3601,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 4019,
+          "kind": "transcript",
+          "text": "Woh actually"
+        },
+        {
+          "t": 4019,
+          "kind": "wait",
+          "text": "trailing hesitation word"
+        },
+        {
+          "t": 4393,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 5900,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 5992,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 6410,
+          "kind": "transcript",
+          "text": "दो दिन से"
+        },
+        {
+          "t": 7796,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 8277,
+          "kind": "transcript",
+          "text": "Speed bahut slow hai."
+        },
+        {
+          "t": 8277,
+          "kind": "respond",
+          "text": "complete"
+        },
+        {
+          "t": 8541,
+          "kind": "agent_start",
+          "text": "agent answering"
+        },
+        {
+          "t": 9629,
+          "kind": "agent_start",
+          "text": "agent answering"
+        },
+        {
+          "t": 9959,
+          "kind": "agent_text",
+          "text": "Samjha, speed slow hai. Pehle registered mobile number bataiye, please."
+        }
+      ]
+    },
+    {
+      "id": "h04",
+      "mode": "base",
+      "rep": 0,
+      "field": null,
+      "speechEndMs": 8612,
+      "firstResponseMs": 3141,
+      "cutOff": true,
+      "replyLatencyMs": 948,
+      "transcripts": [
+        "हाँ, एक सेकंड.",
+        "ہاں، راوٹر ری اسٹارٹ کر دیا میں نے۔ پھر بھی نہیں چل رہا۔"
+      ],
+      "timeline": [
+        {
+          "t": 2035,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 4379,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 4390,
+          "kind": "agent_start",
+          "text": "model took the turn"
+        },
+        {
+          "t": 4731,
+          "kind": "transcript",
+          "text": "हाँ, एक सेकंड."
+        },
+        {
+          "t": 5327,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 5440,
+          "kind": "agent_start",
+          "text": "model took the turn"
+        },
+        {
+          "t": 5841,
+          "kind": "agent_text",
+          "text": "Ji, koi issue nahi. Please aapka registered mobile number bataiye."
+        },
+        {
+          "t": 10803,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 10809,
+          "kind": "agent_start",
+          "text": "model took the turn"
+        },
+        {
+          "t": 11232,
+          "kind": "transcript",
+          "text": "ہاں، راوٹر ری اسٹارٹ کر دیا میں نے۔ پھر بھی نہیں چل رہا۔"
+        },
+        {
+          "t": 11767,
+          "kind": "agent_text",
+          "text": "Thik hai, restart ho gaya. Ab please registered mobile number bata dijiye, 10 digits."
+        }
+      ]
+    },
+    {
+      "id": "h04",
+      "mode": "saboot",
+      "rep": 0,
+      "field": null,
+      "speechEndMs": 8612,
+      "firstResponseMs": 9761,
+      "cutOff": false,
+      "replyLatencyMs": 1149,
+      "transcripts": [
+        "Haan.",
+        "Ek second.",
+        "Haan.",
+        "Router restart kar diya maine.",
+        "Phir bhi nahi chala."
+      ],
+      "timeline": [
+        {
+          "t": 1953,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 2655,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 2749,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 3032,
+          "kind": "transcript",
+          "text": "Haan."
+        },
+        {
+          "t": 3958,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 4322,
+          "kind": "transcript",
+          "text": "Ek second."
+        },
+        {
+          "t": 4322,
+          "kind": "wait",
+          "text": "trailing hesitation word"
+        },
+        {
+          "t": 5255,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 6055,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 6065,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 6422,
+          "kind": "transcript",
+          "text": "Haan."
+        },
+        {
+          "t": 8457,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 8550,
+          "kind": "speech_start",
+          "text": "caller speaking"
+        },
+        {
+          "t": 8868,
+          "kind": "transcript",
+          "text": "Router restart kar diya maine."
+        },
+        {
+          "t": 10252,
+          "kind": "speech_stop",
+          "text": "pause"
+        },
+        {
+          "t": 10658,
+          "kind": "transcript",
+          "text": "Phir bhi nahi chala."
+        },
+        {
+          "t": 10658,
+          "kind": "respond",
+          "text": "complete"
+        },
+        {
+          "t": 10938,
+          "kind": "agent_start",
+          "text": "agent answering"
+        },
+        {
+          "t": 11647,
+          "kind": "agent_text",
+          "text": "Thik hai, ab complaint log karne ke liye ek ek detail lete hain."
+        },
+        {
+          "t": 11968,
+          "kind": "agent_start",
+          "text": "agent answering"
+        },
+        {
+          "t": 12334,
+          "kind": "agent_text",
+          "text": "Aapka registered mobile number bataiye, please."
+        }
+      ]
+    }
+  ]
+}

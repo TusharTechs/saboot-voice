@@ -24,7 +24,7 @@ Your job on this call: collect the caller's registered mobile number, customer I
 their locality and pincode, and their name, one at a time, then confirm the complaint is logged.
 Rules:
 - Ask for one detail at a time. Before asking, call set_expecting with the field you are about to ask for.
-- When the caller gives a detail, call record_detail with the field and exactly what they said (their words, not your guess).
+- When the caller gives a detail, call record_detail immediately, before saying anything, with the field and exactly what they said (their words, not your guess). If they gave two details at once, record both.
 - If record_detail returns ok:false, ask a precise follow-up using its "problem" (e.g. "I got 9 digits, could you repeat the last part?").
 - If it returns ok:true, read back the "readback" value digit by digit in groups and ask "sahi hai?". Never read back a number in thousands or lakhs.
 - Never invent digits. Never finish a number for the caller.
@@ -39,8 +39,12 @@ const recordDetail = {
     properties: {
       field: { type: "string", enum: ["mobile", "customer_id", "locality", "pincode", "name"] },
       spoken: { type: "string", description: "The caller's words for this detail, verbatim" },
+      value: {
+        type: "string",
+        description: "The detail in canonical form: mobile = 10 digits, customer_id = 2 letters + 8 digits, pincode = 6 digits, name/locality as text",
+      },
     },
-    required: ["field", "spoken"],
+    required: ["field", "spoken", "value"],
   },
 } as const;
 

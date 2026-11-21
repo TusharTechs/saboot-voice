@@ -63,6 +63,12 @@ const LETTER_WORDS: Record<string, string> = {
   "यू": "U", "वी": "V", "डब्ल्यू": "W", "एक्स": "X", "वाई": "Y", "ज़ेड": "Z", "जेड": "Z",
 };
 
+/** Two-letter words that are words, not ID letters. */
+const ID_STOPWORDS = new Set([
+  "id", "is", "it", "in", "on", "of", "at", "to", "do", "so", "no", "my", "me", "we", "he", "hi", "ok", "or", "an", "as", "be", "by",
+  "if", "up", "us", "ji", "ki", "ka", "ke", "ko", "se", "na", "ho", "ye", "wo", "ab", "jo", "mai", "hai", "kya", "key", "kai", "kar",
+]);
+
 /**
  * Customer ID for the demo ISP: two letters then eight digits, e.g. HY20481733.
  * Letters can be spelled with "for"/"as in" words; digits use the number parser.
@@ -77,8 +83,7 @@ export function parseCustomerId(text: string): Capture {
     let letter: string | undefined;
     if (/^[a-z]$/.test(w)) letter = w.toUpperCase();
     else if (w in LETTER_WORDS) letter = LETTER_WORDS[w];
-    else if (/^[a-z]{2}$/.test(w) && i + 1 < words.length && /^\d|^(zero|one|two|three|four|five|six|seven|eight|nine)$/.test(words[i + 1]) && letters === "")
-      letter = w.toUpperCase(); // "hy 2 0 4..." transcribed as a 2-letter word
+    else if (/^[a-z]{2}$/.test(w) && letters === "" && !ID_STOPWORDS.has(w)) letter = w.toUpperCase(); // "TS", "hy" as one word
     if (letter) {
       letters += letter;
       // skip "for Sita" / "as in Bombay"
@@ -122,7 +127,31 @@ export const LOCALITIES: { name: string; aliases: string[]; city: string; pincod
 
 export function findLocality(text: string) {
   const t = text.toLowerCase();
-  return LOCALITIES.find((l) => l.aliases.some((a) => t.includes(a)));
+  const exact = LOCALITIES.find((l) => l.aliases.some((a) => t.includes(a)));
+  if (exact) return exact;
+  // fuzzy: "Utpal" -> Uppal, "Amirpet" -> Ameerpet, "maadha pour" -> Madhapur
+  const words = t.replace(/[^a-z\s]/g, " ").split(/\s+/).filter(Boolean);
+  const grams = [...words, ...words.slice(1).map((w, i) => words[i] + w), ...words.slice(1).map((w, i) => words[i] + " " + w)];
+  let best: { loc: (typeof LOCALITIES)[number]; d: number } | undefined;
+  for (const loc of LOCALITIES)
+    for (const a of loc.aliases) {
+      if (!/^[a-z ]+$/.test(a) || a.length < 5) continue;
+      for (const g of grams) {
+        const d = editDistance(g, a);
+        const limit = a.length >= 9 ? 3 : a.length >= 7 ? 2 : 1; // "power" must not become Powai
+        if (d <= limit && (!best || d < best.d)) best = { loc, d };
+      }
+    }
+  return best?.loc;
+}
+
+function editDistance(a: string, b: string): number {
+  const dp = Array.from({ length: a.length + 1 }, (_, i) => [i, ...Array(b.length).fill(0)]);
+  for (let j = 1; j <= b.length; j++) dp[0][j] = j;
+  for (let i = 1; i <= a.length; i++)
+    for (let j = 1; j <= b.length; j++)
+      dp[i][j] = Math.min(dp[i - 1][j] + 1, dp[i][j - 1] + 1, dp[i - 1][j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1));
+  return dp[a.length][b.length];
 }
 
 export function parseLocality(text: string): Capture {
@@ -136,7 +165,7 @@ export function parseName(text: string): Capture {
   const name = text
     .replace(/\b(mera naam|my name is|naam hai|name is|i am|main|hai|hoon|ji|haan|sir|madam)\b/gi, "")
     .replace(/(मेरा नाम|है|हूँ|जी)/g, "")
-    .replace(/[^\p{L}\s.'-]/gu, " ")
+    .replace(/[^\p{L}\p{M}\s'-]/gu, " ")
     .replace(/\s+/g, " ")
     .trim();
   if (!name) return { field: "name", ok: false, problem: "no name heard" };

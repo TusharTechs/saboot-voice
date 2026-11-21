@@ -68,4 +68,27 @@ export const SCENARIOS: Scenario[] = [
   { id: "h04", field: null, question: Q.problem, segments: [["Haan, ek second", 1600], ["haan, router restart kar diya maine, phir bhi nahi chal raha", 0]], snr: 10, tag: "ek second" },
 ];
 
+/**
+ * Held-out clips (ids start with "x"): written after the harness was tuned on the
+ * clips above and never used for tuning. Reported separately.
+ */
+SCENARIOS.push(
+  { id: "x01", field: "mobile", question: Q.mobile, segments: [["Haan likhiye, eight one nine seven", 1400], ["two four, six six, zero three", 0]], expect: "8197246603", snr: 15, tag: "pause" },
+  { id: "x02", field: "mobile", question: Q.mobile, segments: [["Mera number triple nine eight", 1300], ["ek minute", 800], ["seven one two four five six", 0]], expect: "9998712456", snr: 12, tag: "ek minute" },
+  { id: "x03", field: "mobile", question: Q.mobile, segments: [["छह तीन शून्य", 1100], ["नौ नौ आठ, सात सात", 900], ["एक दो", 0]], expect: "6309987712", snr: 15, tag: "hindi digits" },
+  { id: "x04", field: "mobile", question: Q.mobile, segments: [["seventy three, eighty one", 1500], ["forty, double two, fifty nine", 0]], expect: "7381402259", snr: 12, tag: "pairs" },
+  { id: "x05", field: "mobile", question: Q.mobile, segments: [["nine one two three, four five", 900], ["sorry, nine one two three, four six", 900], ["seven eight nine zero", 0]], expect: "9123467890", snr: 15, tag: "correction" },
+  { id: "x06", field: "customer_id", question: Q.customer_id, segments: [["Customer ID hai A P", 1000], ["three three one two", 1200], ["eight four zero six", 0]], expect: "AP33128406", snr: 15, tag: "pause" },
+  { id: "x07", field: "customer_id", question: Q.customer_id, segments: [["R for Ram, J for Jaipur", 1100], ["zero nine", 1200], ["double seven, one four, five two", 0]], expect: "RJ09771452", snr: 10, tag: "spelled letters" },
+  { id: "x08", field: "customer_id", question: Q.customer_id, segments: [["टी एस", 900], ["छह छह", 1200], ["तीन तीन शून्य एक नौ आठ", 0]], expect: "TS66330198", snr: 20, tag: "hindi" },
+  { id: "x09", field: "pincode", question: Q.pincode, segments: [["Jubilee Hills, pin hai five zero", 1300], ["zero zero three three", 0]], expect: "500033", snr: 15, tag: "pause" },
+  { id: "x10", field: "pincode", question: Q.pincode, segments: [["Whitefield, five six zero", 1400], ["zero six six", 0]], expect: "560066", snr: 12, tag: "pause" },
+  { id: "x11", field: "pincode", question: Q.pincode, segments: [["Miyapur, five double zero", 1100], ["zero four nine", 0]], expect: "500049", snr: 15, tag: "double" },
+  { id: "x12", field: "pincode", question: Q.pincode, segments: [["Powai, four zero zero", 1300], ["zero seven six", 0]], expect: "400076", snr: 10, tag: "pause" },
+  { id: "x13", field: "name", question: Q.name, segments: [["Mera naam Haritha Varma hai", 0]], expect: "Haritha Varma", snr: 15, tag: "name" },
+  { id: "x14", field: "name", question: Q.name, segments: [["Ji, main Anjali Deshpande", 0]], expect: "Anjali Deshpande", snr: 12, tag: "name" },
+  { id: "x15", field: null, question: Q.problem, segments: [["Speed bahut kam aa rahi hai, wo", 1400], ["shaam ko toh bilkul nahi chalta", 0]], snr: 15, tag: "wo" },
+  { id: "x16", field: null, question: Q.problem, segments: [["Haan matlab", 1300], ["router badalna padega kya?", 0]], snr: 12, tag: "matlab" },
+);
+
 export const VOICES = ["coral", "ash", "sage", "verse", "ballad", "marin", "cedar"];

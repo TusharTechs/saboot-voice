@@ -24,7 +24,7 @@ const STRONG_DIGITS: Record<string, string> = {
 /** Words that are digits only when they sit next to other digits ("do" is also "give", "o" is a letter). */
 const WEAK_DIGITS: Record<string, string> = {
   o: "0", oh: "0", ek: "1", "एक": "1", do: "2", tin: "3", char: "4", che: "6", chah: "6",
-  sat: "7", aat: "8", nao: "9",
+  sat: "7", saath: "7", sath: "7", aat: "8", nao: "9", // "saath" is also "with": only next to digits
 };
 
 const TEENS: Record<string, string> = {
@@ -66,8 +66,9 @@ export function tokenize(raw: string): Token[] {
   for (const p of CORRECTION_PHRASES) text = text.replace(p, " sorry ");
   // Devanagari digits -> ASCII
   text = text.replace(/[०-९]/g, (d) => String(DEVANAGARI_DIGITS.indexOf(d)));
-  // split digit strings like "98765" into single tokens per digit later; keep separators
-  text = text.replace(/[.,;:!?…—–]+/g, " | ").replace(/[-]/g, " ");
+  // transcribers glue letters to digits ("kl77", "ts446123"): split them
+  text = text.replace(/([a-z]+)(\d+)/g, "$1 $2").replace(/(\d+)([a-z]+)/g, "$1 $2");
+  text = text.replace(/[.,;:!?…—–。、।॥]+/g, " | ").replace(/[-]/g, " ");
   const out: Token[] = [];
   for (const part of text.split(/\s+/)) {
     if (!part) continue;
@@ -182,6 +183,14 @@ export function findDigitRuns(raw: string): DigitRun[] {
       const next = neighbour(words, i, +1);
       if (inRun || (prev && isNumericWord(prev)) || (next && isNumericWord(next))) {
         emit(WEAK_DIGITS[w]);
+        continue;
+      }
+    }
+    // "nau" (9) is often transcribed as "no"/"now" at the start of a number
+    if (!inRun && (w === "no" || w === "now" || w === "know")) {
+      const next = neighbour(words, i, +1);
+      if (next && (digitValue(next) !== undefined || next in WEAK_DIGITS || next === "saath")) {
+        emit("9");
         continue;
       }
     }

@@ -48,6 +48,11 @@ export function judgeTurn(input: TurnInput, cfg: TurnConfig = DEFAULT_TURN_CONFI
     const runs = findDigitRuns(text);
     const heard = runs.map((r) => r.digits).join("").replace(/^(91|0)(?=\d{10}$)/, "");
     const needDigits = input.expecting === "customer_id" ? 8 : expected;
+    // asked for a number, nothing numeric yet ("ID hai TS…", "pin code hai…"): they're about to say it
+    if (heard.length === 0 && !/\b(nahi pata|don'?t know|yaad nahi|kyun|why|baad mein|later)\b/i.test(text)) {
+      if (input.silenceMs < cfg.hesitationHoldMs)
+        return { action: "wait", reason: `asked for ${input.expecting}, no digits yet`, holdMs: cfg.hesitationHoldMs - input.silenceMs };
+    }
     if (heard.length > 0 && heard.length < needDigits) {
       if (input.silenceMs < cfg.numberHoldMs)
         return { action: "wait", reason: `number incomplete: ${heard.length} of ${needDigits} digits`, holdMs: cfg.numberHoldMs - input.silenceMs };

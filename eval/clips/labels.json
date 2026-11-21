@@ -1,0 +1,1304 @@
+{
+  "m01": {
+    "id": "m01",
+    "field": "mobile",
+    "question": "Apna registered mobile number bataiye?",
+    "segments": [
+      [
+        "Haan, mera number hai nine eight four nine",
+        1300
+      ],
+      [
+        "zero double one, three two seven",
+        0
+      ]
+    ],
+    "expect": "9849011327",
+    "snr": 20,
+    "tag": "pause",
+    "voice": "coral",
+    "speechEndMs": 9225,
+    "pauses": [
+      {
+        "startMs": 4972,
+        "endMs": 6272
+      }
+    ],
+    "durationMs": 9225
+  },
+  "m02": {
+    "id": "m02",
+    "field": "mobile",
+    "question": "Apna registered mobile number bataiye?",
+    "segments": [
+      [
+        "Number likh lijiye, seven zero three two",
+        1500
+      ],
+      [
+        "ek second",
+        900
+      ],
+      [
+        "six eight, double five, four one",
+        0
+      ]
+    ],
+    "expect": "7032685541",
+    "snr": 12,
+    "tag": "ek second",
+    "voice": "ash",
+    "speechEndMs": 13076,
+    "pauses": [
+      {
+        "startMs": 5030,
+        "endMs": 6530
+      },
+      {
+        "startMs": 7837,
+        "endMs": 8737
+      }
+    ],
+    "durationMs": 13076
+  },
+  "m03": {
+    "id": "m03",
+    "field": "mobile",
+    "question": "Apna registered mobile number bataiye?",
+    "segments": [
+      [
+        "नौ आठ सात छह पांच",
+        1200
+      ],
+      [
+        "चार तीन दो एक शून्य",
+        0
+      ]
+    ],
+    "expect": "9876543210",
+    "snr": 20,
+    "tag": "hindi digits",
+    "voice": "sage",
+    "speechEndMs": 7396,
+    "pauses": [
+      {
+        "startMs": 3290,
+        "endMs": 4490
+      }
+    ],
+    "durationMs": 7396
+  },
+  "m04": {
+    "id": "m04",
+    "field": "mobile",
+    "question": "Apna registered mobile number bataiye?",
+    "segments": [
+      [
+        "ninety eight, fifty two",
+        1400
+      ],
+      [
+        "seventy one, double zero, sixty three",
+        0
+      ]
+    ],
+    "expect": "9852710063",
+    "snr": 15,
+    "tag": "pairs",
+    "voice": "verse",
+    "speechEndMs": 7879,
+    "pauses": [
+      {
+        "startMs": 2938,
+        "endMs": 4338
+      }
+    ],
+    "durationMs": 7879
+  },
+  "m05": {
+    "id": "m05",
+    "field": "mobile",
+    "question": "Apna registered mobile number bataiye?",
+    "segments": [
+      [
+        "eight eight zero one, two three",
+        1000
+      ],
+      [
+        "nahi nahi, eight eight zero one, two four",
+        800
+      ],
+      [
+        "five six seven nine",
+        0
+      ]
+    ],
+    "expect": "8801245679",
+    "snr": 15,
+    "tag": "correction",
+    "voice": "ballad",
+    "speechEndMs": 12178,
+    "pauses": [
+      {
+        "startMs": 4074,
+        "endMs": 5074
+      },
+      {
+        "startMs": 8828,
+        "endMs": 9628
+      }
+    ],
+    "durationMs": 12178
+  },
+  "m06": {
+    "id": "m06",
+    "field": "mobile",
+    "question": "Apna registered mobile number bataiye?",
+    "segments": [
+      [
+        "plus nine one",
+        700
+      ],
+      [
+        "nine one double zero",
+        1100
+      ],
+      [
+        "four five six, triple eight",
+        0
+      ]
+    ],
+    "expect": "9100456888",
+    "snr": 10,
+    "tag": "+91",
+    "voice": "marin",
+    "speechEndMs": 7752,
+    "pauses": [
+      {
+        "startMs": 2091,
+        "endMs": 2791
+      },
+      {
+        "startMs": 4331,
+        "endMs": 5431
+      }
+    ],
+    "durationMs": 7752
+  },
+  "m07": {
+    "id": "m07",
+    "field": "mobile",
+    "question": "Apna registered mobile number bataiye?",
+    "segments": [
+      [
+        "Haan ji, six three zero four",
+        1600
+      ],
+      [
+        "matlab",
+        600
+      ],
+      [
+        "two two nine one eight eight",
+        0
+      ]
+    ],
+    "expect": "6304229188",
+    "snr": 12,
+    "tag": "matlab",
+    "voice": "cedar",
+    "speechEndMs": 7724,
+    "pauses": [
+      {
+        "startMs": 2902,
+        "endMs": 4502
+      },
+      {
+        "startMs": 5207,
+        "endMs": 5807
+      }
+    ],
+    "durationMs": 7724
+  },
+  "m08": {
+    "id": "m08",
+    "field": "mobile",
+    "question": "Apna registered mobile number bataiye?",
+    "segments": [
+      [
+        "Na number andi, nine five five zero",
+        1300
+      ],
+      [
+        "one two, three four, five six",
+        0
+      ]
+    ],
+    "expect": "9550123456",
+    "snr": 15,
+    "tag": "pause",
+    "voice": "coral",
+    "speechEndMs": 10311,
+    "pauses": [
+      {
+        "startMs": 5311,
+        "endMs": 6611
+      }
+    ],
+    "durationMs": 10311
+  },
+  "m09": {
+    "id": "m09",
+    "field": "mobile",
+    "question": "Apna registered mobile number bataiye?",
+    "segments": [
+      [
+        "Seven eight double nine",
+        1400
+      ],
+      [
+        "zero, zero, one, four, two, six",
+        0
+      ]
+    ],
+    "expect": "7899001426",
+    "snr": 10,
+    "tag": "pause",
+    "voice": "ash",
+    "speechEndMs": 8591,
+    "pauses": [
+      {
+        "startMs": 2645,
+        "endMs": 4045
+      }
+    ],
+    "durationMs": 8591
+  },
+  "m10": {
+    "id": "m10",
+    "field": "mobile",
+    "question": "Apna registered mobile number bataiye?",
+    "segments": [
+      [
+        "nau saat aath, do do",
+        1200
+      ],
+      [
+        "teen chaar, paanch chhe saat",
+        0
+      ]
+    ],
+    "expect": "9782234567",
+    "snr": 15,
+    "tag": "hinglish digits",
+    "voice": "sage",
+    "speechEndMs": 8534,
+    "pauses": [
+      {
+        "startMs": 3677,
+        "endMs": 4877
+      }
+    ],
+    "durationMs": 8534
+  },
+  "c01": {
+    "id": "c01",
+    "field": "customer_id",
+    "question": "Aapka customer ID kya hai? Do letters aur aath digits.",
+    "segments": [
+      [
+        "Customer ID hai H Y",
+        900
+      ],
+      [
+        "two zero four eight",
+        1300
+      ],
+      [
+        "one seven three three",
+        0
+      ]
+    ],
+    "expect": "HY20481733",
+    "snr": 20,
+    "tag": "pause",
+    "voice": "verse",
+    "speechEndMs": 10630,
+    "pauses": [
+      {
+        "startMs": 3320,
+        "endMs": 4220
+      },
+      {
+        "startMs": 6355,
+        "endMs": 7655
+      }
+    ],
+    "durationMs": 10630
+  },
+  "c02": {
+    "id": "c02",
+    "field": "customer_id",
+    "question": "Aapka customer ID kya hai? Do letters aur aath digits.",
+    "segments": [
+      [
+        "S for Sita, B for Bombay",
+        1000
+      ],
+      [
+        "five five",
+        1200
+      ],
+      [
+        "zero one two nine four four",
+        0
+      ]
+    ],
+    "expect": "SB55012944",
+    "snr": 12,
+    "tag": "spelled letters",
+    "voice": "ballad",
+    "speechEndMs": 10644,
+    "pauses": [
+      {
+        "startMs": 3795,
+        "endMs": 4795
+      },
+      {
+        "startMs": 6234,
+        "endMs": 7434
+      }
+    ],
+    "durationMs": 10644
+  },
+  "c03": {
+    "id": "c03",
+    "field": "customer_id",
+    "question": "Aapka customer ID kya hai? Do letters aur aath digits.",
+    "segments": [
+      [
+        "K L, seven seven",
+        1300
+      ],
+      [
+        "eight one, double three, nine zero",
+        0
+      ]
+    ],
+    "expect": "KL77813390",
+    "snr": 15,
+    "tag": "pause",
+    "voice": "marin",
+    "speechEndMs": 7182,
+    "pauses": [
+      {
+        "startMs": 2641,
+        "endMs": 3941
+      }
+    ],
+    "durationMs": 7182
+  },
+  "c04": {
+    "id": "c04",
+    "field": "customer_id",
+    "question": "Aapka customer ID kya hai? Do letters aur aath digits.",
+    "segments": [
+      [
+        "H for Hyderabad, Y for Yamuna",
+        1100
+      ],
+      [
+        "three nine one zero",
+        1200
+      ],
+      [
+        "zero five eight one",
+        0
+      ]
+    ],
+    "expect": "HY39100581",
+    "snr": 10,
+    "tag": "spelled letters",
+    "voice": "cedar",
+    "speechEndMs": 10283,
+    "pauses": [
+      {
+        "startMs": 3961,
+        "endMs": 5061
+      },
+      {
+        "startMs": 6934,
+        "endMs": 8134
+      }
+    ],
+    "durationMs": 10283
+  },
+  "c05": {
+    "id": "c05",
+    "field": "customer_id",
+    "question": "Aapka customer ID kya hai? Do letters aur aath digits.",
+    "segments": [
+      [
+        "ID hai T S",
+        800
+      ],
+      [
+        "double four, double six",
+        1300
+      ],
+      [
+        "one two three four",
+        0
+      ]
+    ],
+    "expect": "TS44661234",
+    "snr": 15,
+    "tag": "double",
+    "voice": "coral",
+    "speechEndMs": 9344,
+    "pauses": [
+      {
+        "startMs": 2378,
+        "endMs": 3178
+      },
+      {
+        "startMs": 5417,
+        "endMs": 6717
+      }
+    ],
+    "durationMs": 9344
+  },
+  "c06": {
+    "id": "c06",
+    "field": "customer_id",
+    "question": "Aapka customer ID kya hai? Do letters aur aath digits.",
+    "segments": [
+      [
+        "एच वाई",
+        900
+      ],
+      [
+        "चार चार दो दो",
+        1200
+      ],
+      [
+        "एक एक सात सात",
+        0
+      ]
+    ],
+    "expect": "HY44221177",
+    "snr": 20,
+    "tag": "hindi",
+    "voice": "ash",
+    "speechEndMs": 8066,
+    "pauses": [
+      {
+        "startMs": 1510,
+        "endMs": 2410
+      },
+      {
+        "startMs": 4047,
+        "endMs": 5247
+      }
+    ],
+    "durationMs": 8066
+  },
+  "p01": {
+    "id": "p01",
+    "field": "pincode",
+    "question": "Aapka area aur pincode bataiye?",
+    "segments": [
+      [
+        "Main Kukatpally mein rehta hoon, pincode five zero",
+        1300
+      ],
+      [
+        "zero zero seven two",
+        0
+      ]
+    ],
+    "expect": "500072",
+    "snr": 15,
+    "tag": "pause",
+    "voice": "sage",
+    "speechEndMs": 8594,
+    "pauses": [
+      {
+        "startMs": 5494,
+        "endMs": 6794
+      }
+    ],
+    "durationMs": 8594
+  },
+  "p02": {
+    "id": "p02",
+    "field": "pincode",
+    "question": "Aapka area aur pincode bataiye?",
+    "segments": [
+      [
+        "Gachibowli, five double zero",
+        1200
+      ],
+      [
+        "zero three two",
+        0
+      ]
+    ],
+    "expect": "500032",
+    "snr": 12,
+    "tag": "double",
+    "voice": "verse",
+    "speechEndMs": 6640,
+    "pauses": [
+      {
+        "startMs": 3253,
+        "endMs": 4453
+      }
+    ],
+    "durationMs": 6640
+  },
+  "p03": {
+    "id": "p03",
+    "field": "pincode",
+    "question": "Aapka area aur pincode bataiye?",
+    "segments": [
+      [
+        "Madhapur side, pin code hai",
+        900
+      ],
+      [
+        "five zero zero, zero eight one",
+        0
+      ]
+    ],
+    "expect": "500081",
+    "snr": 15,
+    "tag": "hesitation",
+    "voice": "ballad",
+    "speechEndMs": 8258,
+    "pauses": [
+      {
+        "startMs": 3610,
+        "endMs": 4510
+      }
+    ],
+    "durationMs": 8258
+  },
+  "p04": {
+    "id": "p04",
+    "field": "pincode",
+    "question": "Aapka area aur pincode bataiye?",
+    "segments": [
+      [
+        "Ameerpet, pincode five zero zero zero",
+        1400
+      ],
+      [
+        "one six",
+        0
+      ]
+    ],
+    "expect": "500016",
+    "snr": 10,
+    "tag": "pause",
+    "voice": "marin",
+    "speechEndMs": 6161,
+    "pauses": [
+      {
+        "startMs": 3580,
+        "endMs": 4980
+      }
+    ],
+    "durationMs": 6161
+  },
+  "p05": {
+    "id": "p05",
+    "field": "pincode",
+    "question": "Aapka area aur pincode bataiye?",
+    "segments": [
+      [
+        "Koramangala, five six zero",
+        1300
+      ],
+      [
+        "zero three four",
+        0
+      ]
+    ],
+    "expect": "560034",
+    "snr": 15,
+    "tag": "pause",
+    "voice": "cedar",
+    "speechEndMs": 6152,
+    "pauses": [
+      {
+        "startMs": 3270,
+        "endMs": 4570
+      }
+    ],
+    "durationMs": 6152
+  },
+  "p06": {
+    "id": "p06",
+    "field": "pincode",
+    "question": "Aapka area aur pincode bataiye?",
+    "segments": [
+      [
+        "Uppal, five zero zero",
+        1200
+      ],
+      [
+        "zero three nine",
+        0
+      ]
+    ],
+    "expect": "500039",
+    "snr": 20,
+    "tag": "pause",
+    "voice": "coral",
+    "speechEndMs": 5834,
+    "pauses": [
+      {
+        "startMs": 2670,
+        "endMs": 3870
+      }
+    ],
+    "durationMs": 5834
+  },
+  "n01": {
+    "id": "n01",
+    "field": "name",
+    "question": "Aapka poora naam bataiye?",
+    "segments": [
+      [
+        "Mera naam Venkata Ramana Reddy hai",
+        0
+      ]
+    ],
+    "expect": "Venkata Ramana Reddy",
+    "snr": 20,
+    "tag": "name",
+    "voice": "ash",
+    "speechEndMs": 3156,
+    "pauses": [],
+    "durationMs": 3156
+  },
+  "n02": {
+    "id": "n02",
+    "field": "name",
+    "question": "Aapka poora naam bataiye?",
+    "segments": [
+      [
+        "Sravani Kodali",
+        0
+      ]
+    ],
+    "expect": "Sravani Kodali",
+    "snr": 15,
+    "tag": "name",
+    "voice": "sage",
+    "speechEndMs": 2369,
+    "pauses": [],
+    "durationMs": 2369
+  },
+  "n03": {
+    "id": "n03",
+    "field": "name",
+    "question": "Aapka poora naam bataiye?",
+    "segments": [
+      [
+        "Ji, Mohammed Irfan",
+        0
+      ]
+    ],
+    "expect": "Mohammed Irfan",
+    "snr": 12,
+    "tag": "name",
+    "voice": "verse",
+    "speechEndMs": 2551,
+    "pauses": [],
+    "durationMs": 2551
+  },
+  "n04": {
+    "id": "n04",
+    "field": "name",
+    "question": "Aapka poora naam bataiye?",
+    "segments": [
+      [
+        "Lakshmi Prasanna Naidu",
+        0
+      ]
+    ],
+    "expect": "Lakshmi Prasanna Naidu",
+    "snr": 15,
+    "tag": "name",
+    "voice": "ballad",
+    "speechEndMs": 2610,
+    "pauses": [],
+    "durationMs": 2610
+  },
+  "h01": {
+    "id": "h01",
+    "field": null,
+    "question": "Bataiye, kya problem ho rahi hai?",
+    "segments": [
+      [
+        "Mera internet kal raat se band hai aur",
+        1400
+      ],
+      [
+        "router pe red light aa rahi hai",
+        0
+      ]
+    ],
+    "snr": 15,
+    "tag": "aur",
+    "voice": "marin",
+    "speechEndMs": 7063,
+    "pauses": [
+      {
+        "startMs": 3546,
+        "endMs": 4946
+      }
+    ],
+    "durationMs": 7063
+  },
+  "h02": {
+    "id": "h02",
+    "field": null,
+    "question": "Bataiye, kya problem ho rahi hai?",
+    "segments": [
+      [
+        "Bill to maine pay kar diya tha, matlab",
+        1500
+      ],
+      [
+        "phir bhi connection suspend dikha raha hai",
+        0
+      ]
+    ],
+    "snr": 12,
+    "tag": "matlab",
+    "voice": "cedar",
+    "speechEndMs": 7830,
+    "pauses": [
+      {
+        "startMs": 3433,
+        "endMs": 4933
+      }
+    ],
+    "durationMs": 7830
+  },
+  "h03": {
+    "id": "h03",
+    "field": null,
+    "question": "Bataiye, kya problem ho rahi hai?",
+    "segments": [
+      [
+        "Wo actually",
+        1200
+      ],
+      [
+        "do din se speed bahut slow hai",
+        0
+      ]
+    ],
+    "snr": 15,
+    "tag": "wo actually",
+    "voice": "coral",
+    "speechEndMs": 6113,
+    "pauses": [
+      {
+        "startMs": 1765,
+        "endMs": 2965
+      }
+    ],
+    "durationMs": 6113
+  },
+  "h04": {
+    "id": "h04",
+    "field": null,
+    "question": "Bataiye, kya problem ho rahi hai?",
+    "segments": [
+      [
+        "Haan, ek second",
+        1600
+      ],
+      [
+        "haan, router restart kar diya maine, phir bhi nahi chal raha",
+        0
+      ]
+    ],
+    "snr": 10,
+    "tag": "ek second",
+    "voice": "ash",
+    "speechEndMs": 8612,
+    "pauses": [
+      {
+        "startMs": 2166,
+        "endMs": 3766
+      }
+    ],
+    "durationMs": 8612
+  },
+  "x01": {
+    "id": "x01",
+    "field": "mobile",
+    "question": "Apna registered mobile number bataiye?",
+    "segments": [
+      [
+        "Haan likhiye, eight one nine seven",
+        1400
+      ],
+      [
+        "two four, six six, zero three",
+        0
+      ]
+    ],
+    "expect": "8197246603",
+    "snr": 15,
+    "tag": "pause",
+    "voice": "sage",
+    "speechEndMs": 10283,
+    "pauses": [
+      {
+        "startMs": 5002,
+        "endMs": 6402
+      }
+    ],
+    "durationMs": 10283
+  },
+  "x02": {
+    "id": "x02",
+    "field": "mobile",
+    "question": "Apna registered mobile number bataiye?",
+    "segments": [
+      [
+        "Mera number triple nine eight",
+        1300
+      ],
+      [
+        "ek minute",
+        800
+      ],
+      [
+        "seven one two four five six",
+        0
+      ]
+    ],
+    "expect": "9998712456",
+    "snr": 12,
+    "tag": "ek minute",
+    "voice": "verse",
+    "speechEndMs": 9614,
+    "pauses": [
+      {
+        "startMs": 2998,
+        "endMs": 4298
+      },
+      {
+        "startMs": 5327,
+        "endMs": 6127
+      }
+    ],
+    "durationMs": 9614
+  },
+  "x03": {
+    "id": "x03",
+    "field": "mobile",
+    "question": "Apna registered mobile number bataiye?",
+    "segments": [
+      [
+        "छह तीन शून्य",
+        1100
+      ],
+      [
+        "नौ नौ आठ, सात सात",
+        900
+      ],
+      [
+        "एक दो",
+        0
+      ]
+    ],
+    "expect": "6309987712",
+    "snr": 15,
+    "tag": "hindi digits",
+    "voice": "ballad",
+    "speechEndMs": 8830,
+    "pauses": [
+      {
+        "startMs": 1781,
+        "endMs": 2881
+      },
+      {
+        "startMs": 7141,
+        "endMs": 8041
+      }
+    ],
+    "durationMs": 8830
+  },
+  "x04": {
+    "id": "x04",
+    "field": "mobile",
+    "question": "Apna registered mobile number bataiye?",
+    "segments": [
+      [
+        "seventy three, eighty one",
+        1500
+      ],
+      [
+        "forty, double two, fifty nine",
+        0
+      ]
+    ],
+    "expect": "7381402259",
+    "snr": 12,
+    "tag": "pairs",
+    "voice": "marin",
+    "speechEndMs": 6735,
+    "pauses": [
+      {
+        "startMs": 2363,
+        "endMs": 3863
+      }
+    ],
+    "durationMs": 6735
+  },
+  "x05": {
+    "id": "x05",
+    "field": "mobile",
+    "question": "Apna registered mobile number bataiye?",
+    "segments": [
+      [
+        "nine one two three, four five",
+        900
+      ],
+      [
+        "sorry, nine one two three, four six",
+        900
+      ],
+      [
+        "seven eight nine zero",
+        0
+      ]
+    ],
+    "expect": "9123467890",
+    "snr": 15,
+    "tag": "correction",
+    "voice": "cedar",
+    "speechEndMs": 10109,
+    "pauses": [
+      {
+        "startMs": 3035,
+        "endMs": 3935
+      },
+      {
+        "startMs": 7424,
+        "endMs": 8324
+      }
+    ],
+    "durationMs": 10109
+  },
+  "x06": {
+    "id": "x06",
+    "field": "customer_id",
+    "question": "Aapka customer ID kya hai? Do letters aur aath digits.",
+    "segments": [
+      [
+        "Customer ID hai A P",
+        1000
+      ],
+      [
+        "three three one two",
+        1200
+      ],
+      [
+        "eight four zero six",
+        0
+      ]
+    ],
+    "expect": "AP33128406",
+    "snr": 15,
+    "tag": "pause",
+    "voice": "coral",
+    "speechEndMs": 10181,
+    "pauses": [
+      {
+        "startMs": 3310,
+        "endMs": 4310
+      },
+      {
+        "startMs": 6397,
+        "endMs": 7597
+      }
+    ],
+    "durationMs": 10181
+  },
+  "x07": {
+    "id": "x07",
+    "field": "customer_id",
+    "question": "Aapka customer ID kya hai? Do letters aur aath digits.",
+    "segments": [
+      [
+        "R for Ram, J for Jaipur",
+        1100
+      ],
+      [
+        "zero nine",
+        1200
+      ],
+      [
+        "double seven, one four, five two",
+        0
+      ]
+    ],
+    "expect": "RJ09771452",
+    "snr": 10,
+    "tag": "spelled letters",
+    "voice": "ash",
+    "speechEndMs": 11316,
+    "pauses": [
+      {
+        "startMs": 4309,
+        "endMs": 5409
+      },
+      {
+        "startMs": 6903,
+        "endMs": 8103
+      }
+    ],
+    "durationMs": 11316
+  },
+  "x08": {
+    "id": "x08",
+    "field": "customer_id",
+    "question": "Aapka customer ID kya hai? Do letters aur aath digits.",
+    "segments": [
+      [
+        "टी एस",
+        900
+      ],
+      [
+        "छह छह",
+        1200
+      ],
+      [
+        "तीन तीन शून्य एक नौ आठ",
+        0
+      ]
+    ],
+    "expect": "TS66330198",
+    "snr": 20,
+    "tag": "hindi",
+    "voice": "sage",
+    "speechEndMs": 7723,
+    "pauses": [
+      {
+        "startMs": 1314,
+        "endMs": 2214
+      },
+      {
+        "startMs": 3524,
+        "endMs": 4724
+      }
+    ],
+    "durationMs": 7723
+  },
+  "x09": {
+    "id": "x09",
+    "field": "pincode",
+    "question": "Aapka area aur pincode bataiye?",
+    "segments": [
+      [
+        "Jubilee Hills, pin hai five zero",
+        1300
+      ],
+      [
+        "zero zero three three",
+        0
+      ]
+    ],
+    "expect": "500033",
+    "snr": 15,
+    "tag": "pause",
+    "voice": "verse",
+    "speechEndMs": 7523,
+    "pauses": [
+      {
+        "startMs": 3820,
+        "endMs": 5120
+      }
+    ],
+    "durationMs": 7523
+  },
+  "x10": {
+    "id": "x10",
+    "field": "pincode",
+    "question": "Aapka area aur pincode bataiye?",
+    "segments": [
+      [
+        "Whitefield, five six zero",
+        1400
+      ],
+      [
+        "zero six six",
+        0
+      ]
+    ],
+    "expect": "560066",
+    "snr": 12,
+    "tag": "pause",
+    "voice": "ballad",
+    "speechEndMs": 6830,
+    "pauses": [
+      {
+        "startMs": 3500,
+        "endMs": 4900
+      }
+    ],
+    "durationMs": 6830
+  },
+  "x11": {
+    "id": "x11",
+    "field": "pincode",
+    "question": "Aapka area aur pincode bataiye?",
+    "segments": [
+      [
+        "Miyapur, five double zero",
+        1100
+      ],
+      [
+        "zero four nine",
+        0
+      ]
+    ],
+    "expect": "500049",
+    "snr": 15,
+    "tag": "double",
+    "voice": "marin",
+    "speechEndMs": 5580,
+    "pauses": [
+      {
+        "startMs": 2711,
+        "endMs": 3811
+      }
+    ],
+    "durationMs": 5580
+  },
+  "x12": {
+    "id": "x12",
+    "field": "pincode",
+    "question": "Aapka area aur pincode bataiye?",
+    "segments": [
+      [
+        "Powai, four zero zero",
+        1300
+      ],
+      [
+        "zero seven six",
+        0
+      ]
+    ],
+    "expect": "400076",
+    "snr": 10,
+    "tag": "pause",
+    "voice": "cedar",
+    "speechEndMs": 5548,
+    "pauses": [
+      {
+        "startMs": 2640,
+        "endMs": 3940
+      }
+    ],
+    "durationMs": 5548
+  },
+  "x13": {
+    "id": "x13",
+    "field": "name",
+    "question": "Aapka poora naam bataiye?",
+    "segments": [
+      [
+        "Mera naam Haritha Varma hai",
+        0
+      ]
+    ],
+    "expect": "Haritha Varma",
+    "snr": 15,
+    "tag": "name",
+    "voice": "coral",
+    "speechEndMs": 3203,
+    "pauses": [],
+    "durationMs": 3203
+  },
+  "x14": {
+    "id": "x14",
+    "field": "name",
+    "question": "Aapka poora naam bataiye?",
+    "segments": [
+      [
+        "Ji, main Anjali Deshpande",
+        0
+      ]
+    ],
+    "expect": "Anjali Deshpande",
+    "snr": 12,
+    "tag": "name",
+    "voice": "ash",
+    "speechEndMs": 3258,
+    "pauses": [],
+    "durationMs": 3258
+  },
+  "x15": {
+    "id": "x15",
+    "field": null,
+    "question": "Bataiye, kya problem ho rahi hai?",
+    "segments": [
+      [
+        "Speed bahut kam aa rahi hai, wo",
+        1400
+      ],
+      [
+        "shaam ko toh bilkul nahi chalta",
+        0
+      ]
+    ],
+    "snr": 15,
+    "tag": "wo",
+    "voice": "sage",
+    "speechEndMs": 7110,
+    "pauses": [
+      {
+        "startMs": 3167,
+        "endMs": 4567
+      }
+    ],
+    "durationMs": 7110
+  },
+  "x16": {
+    "id": "x16",
+    "field": null,
+    "question": "Bataiye, kya problem ho rahi hai?",
+    "segments": [
+      [
+        "Haan matlab",
+        1300
+      ],
+      [
+        "router badalna padega kya?",
+        0
+      ]
+    ],
+    "snr": 12,
+    "tag": "matlab",
+    "voice": "verse",
+    "speechEndMs": 5308,
+    "pauses": [
+      {
+        "startMs": 1660,
+        "endMs": 2960
+      }
+    ],
+    "durationMs": 5308
+  }
+}

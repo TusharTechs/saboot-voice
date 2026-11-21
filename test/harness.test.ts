@@ -38,6 +38,24 @@ test("customer ID spelled in Devanagari", () => {
   assert.equal(parseCustomerId("एच वाई, चार चार दो दो, एक एक सात सात").value, "HY44221177");
 });
 
+test("letters glued to digits and 'no' for nau", () => {
+  assert.equal(parseCustomerId("KL77. Eight one double three nine zero.").value, "KL77813390");
+  assert.equal(parseCustomerId("ID है TS. double four double six. One two three four").value, "TS44661234");
+  assert.equal(allDigits("No saat aath. do do. तीन चार पाँच छे सात"), "9782234567");
+});
+
+test("fuzzy locality, but not ordinary words", () => {
+  assert.equal(parseLocality("Utpal five zero zero").value, "Uppal");
+  assert.equal(parseLocality("Maadha pour site").value, "Madhapur");
+  assert.notEqual(parseLocality("power cut ho gaya").value, "Powai");
+});
+
+test("turn judge waits when a number was asked for but none heard yet", () => {
+  assert.equal(judgeTurn({ transcript: "Customer ID hai TS.", expecting: "customer_id", silenceMs: 400 }).action, "wait");
+  assert.equal(judgeTurn({ transcript: "Madhapur side, pin code hai", expecting: "pincode", silenceMs: 400 }).action, "wait");
+  assert.equal(judgeTurn({ transcript: "mujhe yaad nahi hai", expecting: "mobile", silenceMs: 400 }).action, "respond");
+});
+
 test("tens words: ninety eight seventy six", () => {
   assert.equal(allDigits("ninety eight seventy six five four three two one zero"), "9876543210");
 });

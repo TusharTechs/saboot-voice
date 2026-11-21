@@ -19,8 +19,10 @@ const median = (xs: number[]) => {
   return s[Math.floor(s.length / 2)];
 };
 
-function summarise(mode: string) {
-  const rs = results.filter((r) => r.mode === mode && !r.error);
+const HELD_OUT = (id: string) => id.startsWith("x");
+
+function summarise(mode: string, keep: (r: RunResult) => boolean = () => true) {
+  const rs = results.filter((r) => r.mode === mode && !r.error && keep(r));
   const withEntity = rs.filter((r) => r.expect);
   const byField: Record<string, { n: number; correct: number }> = {};
   for (const r of withEntity) {
@@ -37,7 +39,7 @@ function summarise(mode: string) {
     capturable: withEntity.length,
     byField: Object.fromEntries(Object.entries(byField).map(([k, v]) => [k, { ...v, accuracy: pct(v.correct, v.n) }])),
     medianReplyLatencyMs: median(rs.map((r) => r.replyLatencyMs).filter((x): x is number => x !== null)),
-    errors: results.filter((r) => r.mode === mode && r.error).length,
+    errors: results.filter((r) => r.mode === mode && r.error && keep(r)).length,
   };
 }
 
@@ -45,6 +47,9 @@ const modes = [...new Set(results.map((r) => r.mode))];
 const summary = {
   model, at, clips: new Set(results.map((r) => r.id)).size,
   modes: Object.fromEntries(modes.map((m) => [m, summarise(m)])),
+  tuning: Object.fromEntries(modes.map((m) => [m, summarise(m, (r) => !HELD_OUT(r.id))])),
+  heldOut: Object.fromEntries(modes.map((m) => [m, summarise(m, (r) => HELD_OUT(r.id))])),
+  heldOutClips: new Set(results.filter((r) => HELD_OUT(r.id)).map((r) => r.id)).size,
   perClip: [...new Set(results.map((r) => r.id))].map((id) => ({
     id,
     expect: results.find((r) => r.id === id)?.expect,
@@ -57,12 +62,14 @@ const summary = {
 writeFileSync(resolve(dir, "summary.json"), JSON.stringify(summary, null, 2));
 
 console.log(`\n${model} · ${summary.clips} clips · ${at}\n`);
-console.log("mode    cut-offs        capture accuracy   median reply latency");
+for (const [label, block] of [["all clips", summary.modes], ["tuning clips", summary.tuning], ["held-out clips", summary.heldOut]] as const) {
+console.log(`\n${label}\nmode    cut-offs        capture accuracy   median reply latency`);
 for (const m of modes) {
-  const s = summary.modes[m];
+  const s = (block as any)[m];
   console.log(
     `${m.padEnd(7)} ${`${s.cutOffs}/${s.runs} (${s.cutOffRate}%)`.padEnd(15)} ${`${s.captured}/${s.capturable} (${s.captureAccuracy}%)`.padEnd(18)} ${s.medianReplyLatencyMs ?? "-"} ms${s.errors ? `  (${s.errors} errors)` : ""}`,
   );
+}
 }
 for (const m of modes) {
   console.log(`\n${m} by field: ` + Object.entries(summary.modes[m].byField).map(([f, v]) => `${f} ${v.correct}/${v.n}`).join(" · "));
