@@ -32,6 +32,17 @@ Same realtime model, same voice, same prompt. Saboot sits between the caller's a
 
 `eval/` plays the same caller recordings, in real time, into the realtime model twice: once as it ships, once behind the harness. It records when the agent took the turn and what it captured.
 
+Latest run (`gpt-realtime-2.1`, 46 clips, each played twice per configuration):
+
+| | Caller cut off mid-sentence | Details captured exactly right | Median reply after caller stops |
+|---|---|---|---|
+| Base model, all clips | 50.0% | 73.8% | 932 ms |
+| **Saboot, all clips** | **4.3%** | **88.8%** | 1365 ms |
+| Base model, 16 held-out clips | 37.5% | 67.9% | 932 ms |
+| **Saboot, 16 held-out clips** | **6.3%** | **85.7%** | 1384 ms |
+
+Held-out clips (`x*`) were written after the harness was tuned and never used for tuning. The cost is real: Saboot answers about 0.4 s later once the caller has stopped, because it reads the transcript before deciding. Clips are synthetic (TTS voices with Indian-caller styling, real inserted pauses, mixed background noise); results vary by a few points between runs.
+
 ```
 npm run clips    # synthesize the caller clips (eval/clips, with labels)
 npm run eval     # replay every clip into both configurations
@@ -66,5 +77,7 @@ src/server/    short-lived key minting (local dev server and AWS Lambda)
 eval/          caller scenarios, clip synthesis, A/B replay, report
 deploy/        AWS deploy script
 ```
+
+Slides: `docs/Saboot-Voice-slides.pdf`.
 
 All data is synthetic; "LineOne Fibre" is a fictional provider.

@@ -55,6 +55,9 @@ if ! aws lambda get-function-url-config --function-name "$FN" --region "$REGION"
   aws lambda create-function-url-config --function-name "$FN" --auth-type NONE --region "$REGION" >/dev/null
   aws lambda add-permission --function-name "$FN" --statement-id url-public --action lambda:InvokeFunctionUrl \
     --principal "*" --function-url-auth-type NONE --region "$REGION" >/dev/null
+  # function URLs also need InvokeFunction, limited to calls that arrive through the URL
+  aws lambda add-permission --function-name "$FN" --statement-id url-invoke --action lambda:InvokeFunction \
+    --principal "*" --invoked-via-function-url --region "$REGION" >/dev/null
 fi
 FN_URL="$(aws lambda get-function-url-config --function-name "$FN" --region "$REGION" --query FunctionUrl --output text)"
 FN_HOST="$(echo "$FN_URL" | sed -E 's#https://([^/]+)/?#\1#')"
