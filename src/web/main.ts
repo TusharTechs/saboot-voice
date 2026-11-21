@@ -50,7 +50,11 @@ function fail(e: unknown) {
 async function startCall() {
   resetUi();
   setStatus("Connecting…");
-  const r = await fetch(`/api/session?mode=${mode}`, { method: "POST" });
+  let r = await fetch(`/api/session?mode=${mode}`, { method: "POST", headers: { "x-demo-code": accessCode() } });
+  if (r.status === 401) {
+    const code = await askForCode();
+    r = await fetch(`/api/session?mode=${mode}`, { method: "POST", headers: { "x-demo-code": code } });
+  }
   const sess = await r.json();
   if (!r.ok) throw new Error(sess.error ?? `session ${r.status}`);
 
@@ -97,6 +101,40 @@ async function startCall() {
   $("call").classList.add("live");
   $("call-label").textContent = "End call";
   for (const b of document.querySelectorAll<HTMLButtonElement>(".mode button")) b.disabled = true;
+}
+
+/** Demo access code: from ?code= in the link, or remembered in this browser. */
+function accessCode(): string {
+  const fromUrl = new URLSearchParams(location.search).get("code");
+  try {
+    if (fromUrl) localStorage.setItem("saboot-code", fromUrl);
+    return fromUrl ?? localStorage.getItem("saboot-code") ?? "";
+  } catch {
+    return fromUrl ?? "";
+  }
+}
+
+function askForCode(): Promise<string> {
+  return new Promise((resolve) => {
+    setStatus("This demo needs an access code.");
+    const form = document.createElement("form");
+    form.className = "code-form";
+    form.innerHTML = `<label for="code-input">Access code</label><input id="code-input" autocomplete="off" required /><button type="submit">Continue</button>`;
+    $("status").after(form);
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const v = (form.querySelector("input") as HTMLInputElement).value.trim();
+      try {
+        localStorage.setItem("saboot-code", v);
+      } catch {
+        /* private mode */
+      }
+      form.remove();
+      setStatus("Connecting…");
+      resolve(v);
+    });
+    (form.querySelector("input") as HTMLInputElement).focus();
+  });
 }
 
 function hangUp() {
@@ -216,6 +254,16 @@ async function loadResults() {
   const p = document.createElement("p");
   p.textContent = "Once as the model ships (semantic turn detection, values taken as written), once behind the Saboot harness. Same audio, same model, same voice, same prompt.";
   head.append(h, p);
+  const hb = data.heldOut?.base, hs = data.heldOut?.saboot;
+  if (hb && hs && data.heldOutClips) {
+    const ho = document.createElement("p");
+    ho.className = "heldout";
+    ho.textContent =
+      `On the ${data.heldOutClips} held-out clips, written after tuning and never used for it: ` +
+      `caller cut off ${hb.cutOffRate}% → ${hs.cutOffRate}%, details captured exactly right ${hb.captureAccuracy}% → ${hs.captureAccuracy}%, ` +
+      `median reply time ${hb.medianReplyLatencyMs} → ${hs.medianReplyLatencyMs} ms.`;
+    head.append(ho);
+  }
 
   const cards = $("results-cards");
   cards.replaceChildren(
@@ -229,14 +277,20 @@ async function loadResults() {
   const tb = document.createElement("tbody");
   for (const c of data.perClip) {
     const tr = document.createElement("tr");
+    const esc = (s: string) => s.replace(/[&<>"]/g, (ch) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[ch]!);
     const cell = (m: string) => {
-      const r = c.runs[m]?.[0];
-      if (!r) return "–";
-      const parts = [r.cutOff ? "✂ cut off" : "waited"];
-      if (c.expect) parts.push(`${r.captured ?? "nothing"} ${r.correct ? "✓" : "✗"}`);
-      return parts.join(" · ");
+      const rs = c.runs[m] ?? [];
+      if (!rs.length) return "–";
+      return rs
+        .map((r: any) => {
+          const parts = [r.cutOff ? "✂ cut off" : "waited"];
+          if (c.expect) parts.push(`${r.captured ? esc(r.captured) : "nothing"} ${r.correct ? "✓" : "✗"}`);
+          return `<span class="run">${parts.join(" · ")}</span>`;
+        })
+        .join("");
     };
-    tr.innerHTML = `<td class="mono">${c.id}</td><td><audio controls preload="none" src="./clips/${c.id}.wav"></audio></td><td class="mono">${c.expect ?? "(no detail; cut-off only)"}</td><td class="mono">${cell("base")}</td><td class="mono">${cell("saboot")}</td>`;
+    const held = c.id.startsWith("x") ? '<span class="tag">held-out</span>' : "";
+    tr.innerHTML = `<td class="mono">${c.id}${held}</td><td><audio controls preload="none" src="./clips/${c.id}.wav"></audio></td><td class="mono">${c.expect ?? "(no detail; cut-off only)"}</td><td class="mono">${cell("base")}</td><td class="mono">${cell("saboot")}</td>`;
     tb.append(tr);
   }
   table.append(tb);

@@ -41,7 +41,7 @@ if ! aws iam get-role --role-name "$ROLE" >/dev/null 2>&1; then
   sleep 10
 fi
 ROLE_ARN="$(aws iam get-role --role-name "$ROLE" --query Role.Arn --output text)"
-ENVJSON="{\"Variables\":{\"OPENAI_API_KEY\":\"${OPENAI_API_KEY}\"}}"
+ENVJSON="{\"Variables\":{\"OPENAI_API_KEY\":\"${OPENAI_API_KEY}\",\"DEMO_CODE\":\"${DEMO_CODE:-}\"}}"
 if aws lambda get-function --function-name "$FN" --region "$REGION" >/dev/null 2>&1; then
   aws lambda update-function-code --function-name "$FN" --zip-file fileb://dist/lambda/fn.zip --region "$REGION" >/dev/null
   aws lambda wait function-updated --function-name "$FN" --region "$REGION"

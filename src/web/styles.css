@@ -24,6 +24,7 @@
   }
 }
 * { box-sizing: border-box; }
+[hidden] { display: none !important; }
 html, body { margin: 0; }
 body { background: var(--bg); color: var(--ink); font: 15px/1.5 var(--font); min-height: 100vh; }
 h1, h2, h3 { margin: 0; line-height: 1.25; }
@@ -57,6 +58,10 @@ button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 @keyframes pulse { 50% { opacity: .3; } }
 @media (prefers-reduced-motion: reduce) { .call-btn.live .dot { animation: none; } }
 .status { margin: 0; color: var(--muted); font-size: 14px; }
+.code-form { display: grid; grid-template-columns: 1fr auto; gap: 8px; }
+.code-form label { grid-column: 1 / -1; font-size: 13px; color: var(--muted); }
+.code-form input { font: inherit; padding: 8px 10px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); color: var(--ink); min-width: 0; }
+.code-form button { border: 0; border-radius: 8px; padding: 8px 14px; background: var(--accent); color: #fff; font-weight: 600; }
 .meter { display: flex; justify-content: space-between; align-items: baseline; border-top: 1px solid var(--line); padding-top: 12px; }
 .meter span { color: var(--muted); font-size: 13px; }
 .meter strong { font-family: var(--mono); font-size: 18px; font-variant-numeric: tabular-nums; }
@@ -96,8 +101,11 @@ button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 .card { border: 1px solid var(--line); border-radius: 12px; padding: 14px; display: grid; gap: 10px; }
 .card h3 { font-size: 13px; color: var(--muted); font-weight: 600; }
 .bar { display: grid; grid-template-columns: 64px 1fr 64px; gap: 8px; align-items: center; font-size: 13px; }
-.bar .track { height: 10px; border-radius: 5px; background: var(--bg); overflow: hidden; }
-.bar .fill { height: 100%; border-radius: 5px; background: var(--muted); }
+.bar .track { display: block; height: 10px; border-radius: 5px; background: var(--bg); overflow: hidden; }
+.bar .fill { display: block; height: 100%; border-radius: 5px; background: var(--muted); }
+.heldout { margin: 10px 0 0; padding: 10px 12px; border-radius: 10px; background: var(--accent-soft); font-size: 14px; max-width: 80ch; }
+.tag { font-family: var(--font); font-size: 11px; font-weight: 600; color: var(--accent); margin-left: 6px; }
+td .run { display: block; }
 .bar.saboot .fill { background: var(--accent); }
 .bar b { font-family: var(--mono); text-align: right; font-variant-numeric: tabular-nums; }
 .table-wrap { overflow-x: auto; }

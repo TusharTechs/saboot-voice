@@ -11,6 +11,11 @@ createServer(async (req, res) => {
   const url = new URL(req.url ?? "/", "http://localhost");
   try {
     if (req.method === "POST" && url.pathname === "/api/session") {
+      const code = process.env.DEMO_CODE;
+      if (code && req.headers["x-demo-code"] !== code) {
+        res.writeHead(401, { "Content-Type": "application/json" }).end(JSON.stringify({ error: "access code required" }));
+        return;
+      }
       const key = process.env.OPENAI_API_KEY;
       if (!key) throw new Error("OPENAI_API_KEY missing in .env");
       const out = await mintClientSecret(key, parseMode(url.searchParams.get("mode")));

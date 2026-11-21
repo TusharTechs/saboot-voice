@@ -7,3 +7,4 @@ eval/results/raw/
 deploy/.state.json
 *.log
 .DS_Store
+.claude/
