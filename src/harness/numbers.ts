@@ -118,8 +118,13 @@ export function findDigitRuns(raw: string): DigitRun[] {
   const closeGroup = () => {
     if (current) {
       if (pendingCorrection && groups.length) {
-        // replace the last spoken group with the correction
-        groups.pop();
+        // A caller who restarts ("8801 23... nahi, 8801 24") repeats an earlier group:
+        // drop everything from that group on. Otherwise replace just the last group.
+        const head = current.slice(0, Math.min(3, current.length));
+        let restartAt = -1;
+        if (head.length >= 2) for (let j = groups.length - 1; j >= 0; j--) if (groups[j].startsWith(head)) restartAt = j;
+        if (restartAt >= 0) groups.splice(restartAt);
+        else groups.pop();
         corrections++;
       }
       pendingCorrection = false;

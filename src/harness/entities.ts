@@ -57,6 +57,10 @@ const LETTER_WORDS: Record<string, string> = {
   ay: "A", bee: "B", see: "C", cee: "C", dee: "D", ee: "E", ef: "F", eff: "F", gee: "G", jee: "G",
   aitch: "H", ech: "H", eye: "I", jay: "J", kay: "K", el: "L", em: "M", en: "N", pee: "P", queue: "Q",
   cue: "Q", ar: "R", are: "R", es: "S", ess: "S", tee: "T", you: "U", vee: "V", ex: "X", why: "Y", zed: "Z", zee: "Z",
+  // Devanagari spellings of English letters, as Hindi transcripts write them
+  "ए": "A", "बी": "B", "सी": "C", "डी": "D", "ई": "E", "एफ": "F", "जी": "G", "एच": "H", "आई": "I", "जे": "J",
+  "के": "K", "एल": "L", "एम": "M", "एन": "N", "ओ": "O", "पी": "P", "क्यू": "Q", "आर": "R", "एस": "S", "टी": "T",
+  "यू": "U", "वी": "V", "डब्ल्यू": "W", "एक्स": "X", "वाई": "Y", "ज़ेड": "Z", "जेड": "Z",
 };
 
 /**
@@ -130,7 +134,8 @@ export function parseLocality(text: string): Capture {
 /** Names are taken as the agent heard them, but always read back and spelled on request. */
 export function parseName(text: string): Capture {
   const name = text
-    .replace(/\b(mera naam|my name is|naam hai|name is|i am|main)\b/gi, "")
+    .replace(/\b(mera naam|my name is|naam hai|name is|i am|main|hai|hoon|ji|haan|sir|madam)\b/gi, "")
+    .replace(/(मेरा नाम|है|हूँ|जी)/g, "")
     .replace(/[^\p{L}\s.'-]/gu, " ")
     .replace(/\s+/g, " ")
     .trim();

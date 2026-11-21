@@ -30,6 +30,14 @@ test("mid-number self-correction replaces the last group", () => {
   assert.equal(runs[0].corrections, 1);
 });
 
+test("a caller who restarts the number after a correction", () => {
+  assert.equal(allDigits("eight eight zero one, two three, nahi nahi, eight eight zero one, two four, five six seven nine"), "8801245679");
+});
+
+test("customer ID spelled in Devanagari", () => {
+  assert.equal(parseCustomerId("एच वाई, चार चार दो दो, एक एक सात सात").value, "HY44221177");
+});
+
 test("tens words: ninety eight seventy six", () => {
   assert.equal(allDigits("ninety eight seventy six five four three two one zero"), "9876543210");
 });
