@@ -32,16 +32,16 @@ Same realtime model, same voice, same prompt. Saboot sits between the caller's a
 
 `eval/` plays the same caller recordings, in real time, into the realtime model twice: once as it ships, once behind the harness. It records when the agent took the turn and what it captured.
 
-Latest run (`gpt-realtime-2.1`, 46 clips, each played twice per configuration):
+Latest run (`gpt-realtime-2.1`, 46 clips, each played twice per configuration, 184 runs):
 
 | | Caller cut off mid-sentence | Details captured exactly right | Median reply after caller stops |
 |---|---|---|---|
-| Base model, all clips | 50.0% | 73.8% | 932 ms |
-| **Saboot, all clips** | **4.3%** | **88.8%** | 1365 ms |
-| Base model, 16 held-out clips | 37.5% | 67.9% | 932 ms |
-| **Saboot, 16 held-out clips** | **6.3%** | **85.7%** | 1384 ms |
+| Base model, all clips | 52.2% | 71.3% | 953 ms |
+| **Saboot, all clips** | **1.1%** | **87.5%** | 1353 ms |
+| Base model, 16 held-out clips | 40.6% | 71.4% | 972 ms |
+| **Saboot, 16 held-out clips** | **3.1%** | **85.7%** | 1356 ms |
 
-Held-out clips (`x*`) were written after the harness was tuned and never used for tuning. The cost is real: Saboot answers about 0.4 s later once the caller has stopped, because it reads the transcript before deciding. Clips are synthetic (TTS voices with Indian-caller styling, real inserted pauses, mixed background noise); results vary by a few points between runs.
+Held-out clips (`x*`) were written after the harness was tuned and never used for tuning. The cost is real: Saboot answers about 0.4 s later once the caller has stopped, because it reads the transcript before deciding. Clips are synthetic (TTS voices with Indian-caller styling, real inserted pauses, mixed background noise); results vary by a few points between runs. This run completed in two passes because the venue network dropped; runs that failed to connect were re-run with `npm run eval -- --fill`.
 
 ```
 npm run clips    # synthesize the caller clips (eval/clips, with labels)
