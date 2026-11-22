@@ -106,7 +106,11 @@ function runOne(s: (typeof labels)[string], mode: Mode, rep: number): Promise<Ru
       }
       if (ev.type === "error" && !/no active response|already has an active response/i.test(ev.error?.message ?? ""))
         console.error(`  ${s.id}/${mode}: ${ev.error?.message}`);
-      ctl.handle(ev);
+      try {
+        ctl.handle(ev);
+      } catch (e) {
+        finish(`controller error: ${(e as Error).message}`);
+      }
     });
     ws.on("error", (e) => finish(String(e)));
 
@@ -137,7 +141,14 @@ function runOne(s: (typeof labels)[string], mode: Mode, rep: number): Promise<Ru
 }
 
 const jobs: [string, Mode, number][] = [];
-for (const id of Object.keys(labels)) {
+// --fill: re-run only the runs that errored in latest.json and merge them in
+const fill = args.includes("--fill");
+const kept: RunResult[] = [];
+if (fill) {
+  const prev = JSON.parse(readFileSync(resolve(import.meta.dirname, "results", "latest.json"), "utf8")).results as RunResult[];
+  for (const r of prev) (r.error ? jobs.push([r.id, r.mode, r.rep]) : kept.push(r));
+}
+for (const id of fill ? [] : Object.keys(labels)) {
   if (only && !only.includes(id)) continue;
   if (!existsSync(resolve(clipsDir, `${id}.wav`))) continue;
   for (let rep = 0; rep < repeat; rep++) for (const m of modes) jobs.push([id, m, rep]);
@@ -145,17 +156,24 @@ for (const id of Object.keys(labels)) {
 
 const results: RunResult[] = [];
 let next = 0;
+let done = 0;
 async function worker() {
   while (next < jobs.length) {
     const [id, mode, rep] = jobs[next++];
-    const r = await runOne(labels[id], mode, rep);
+    let r = await runOne(labels[id], mode, rep);
+    // a dropped connection says nothing about either mode: retry before recording an error
+    for (let attempt = 1; r.error && attempt <= 2; attempt++) {
+      await new Promise((ok) => setTimeout(ok, 3000 * attempt));
+      r = await runOne(labels[id], mode, rep);
+    }
     results.push(r);
     const status = r.error ? `error: ${r.error}` : `${r.cutOff ? "CUT OFF" : "waited "} captured=${r.captured ?? "-"} ${r.correct === undefined ? "" : r.correct ? "✓" : "✗"}`;
-    console.log(`${String(results.length).padStart(3)}/${jobs.length} ${id} ${mode.padEnd(6)} ${status}`);
+    console.log(`${String(++done).padStart(3)}/${jobs.length} ${id} ${mode.padEnd(6)} ${status}`);
   }
 }
 console.log(`model ${REALTIME_MODEL}, ${jobs.length} runs`);
 await Promise.all(Array.from({ length: Math.min(parallel, jobs.length) }, worker));
+if (fill) results.unshift(...kept);
 
 const outDir = resolve(import.meta.dirname, "results");
 mkdirSync(outDir, { recursive: true });

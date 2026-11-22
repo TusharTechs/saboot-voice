@@ -68,6 +68,17 @@ test("'ek second' misheard as 'eight second' is still a pause, not digits", () =
   assert.equal(allDigits("seven zero three two, eight second, six eight"), "703268");
 });
 
+test("controller survives tool calls with null or missing arguments", async () => {
+  const { CallController } = await import("../src/harness/controller.ts");
+  const sent: any[] = [];
+  const c = new CallController("saboot", (e) => sent.push(e));
+  c.handle({ type: "response.function_call_arguments.done", name: "record_detail", call_id: "a", arguments: "null" });
+  c.handle({ type: "response.function_call_arguments.done", name: "record_detail", call_id: "b", arguments: "{}" });
+  c.handle({ type: "response.function_call_arguments.done", name: "set_expecting", call_id: "c", arguments: "null" });
+  assert.equal(sent.filter((e) => e.item?.type === "function_call_output").length, 3);
+  assert.match(sent[0].item.output, /field missing/);
+});
+
 test("tens words: ninety eight seventy six", () => {
   assert.equal(allDigits("ninety eight seventy six five four three two one zero"), "9876543210");
 });

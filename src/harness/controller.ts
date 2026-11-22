@@ -178,11 +178,18 @@ export class CallController {
   private onTool(name: string, callId: string, argsJson: string) {
     let args: any = {};
     try {
-      args = JSON.parse(argsJson || "{}");
+      const parsed = JSON.parse(argsJson || "{}");
+      if (parsed && typeof parsed === "object") args = parsed; // the model can send "null"
     } catch {
       /* keep empty */
     }
     let output: Record<string, unknown> = { ok: true };
+    if (name === "record_detail" && !["mobile", "customer_id", "locality", "pincode", "name"].includes(args.field)) {
+      // a malformed call: tell the model instead of crashing the call
+      this.send({ type: "conversation.item.create", item: { type: "function_call_output", call_id: callId, output: JSON.stringify({ ok: false, problem: "field missing; call record_detail again with field, spoken and value" }) } });
+      this.pendingFollowUp = true;
+      return;
+    }
     if (name === "set_expecting") {
       this.expecting = args.field && args.field !== "none" ? (args.field as Field) : null;
       output = { ok: true };
